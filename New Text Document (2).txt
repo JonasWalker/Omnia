@@ -1,0 +1,67 @@
+Features:
+	Sales
+	Orders
+	Traking/Editing Repairs
+	Part Lookup
+	Customer Lookup
+	Reports
+	Timesheets
+
+Roles:
+	Admin:
+		Anything and everything
+
+	Manager:
+		Add discounts
+		Create new parts
+		Change prices of parts
+		Order parts		
+
+	Front Desk:
+		Create sales
+		Finish sales
+		Assign repairs to mechanics
+		Start orders
+		Add parts to orders		
+
+	Mechanics:
+		Add/Subtract parts from repairs
+		Finish repairs
+		Request parts to be ordered
+
+
+
+Interfaces:
+	Admin:
+		Sales
+		Orders
+		Traking/Editing Repairs
+		Part Lookup
+		Customer Lookup
+		Reports
+		Timesheets
+
+	Manager:
+		Sales
+		Orders
+		Traking/Editing Repairs
+		Part Lookup
+		Customer Lookup
+		Reports
+		Timesheets
+
+	Front Desk:
+		Sales
+		Orders
+		Traking/Editing Repairs
+		Part Lookup
+		Customer Lookup
+		Reports
+		Timesheets
+
+	Mechanics:
+		Traking/Editing Repairs
+		Part Lookup
+		Customer Lookup
+		Reports
+		Timesheets

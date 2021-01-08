@@ -65,3 +65,39 @@ Interfaces:
 		Customer Lookup
 		Reports
 		Timesheets
+
+Part Info:
+	Part Number
+	Part Description
+	Part Quantity
+	MSRP
+	Dealer Cost
+	Location
+	Manufacturer
+
+New Equipment:
+	Type
+	Model
+	Serial
+	Price
+	Manufacturer	
+
+Customer Info:
+	Name
+	Phone Number 1
+	Phone Number 2
+	Address 1
+	Address 2
+	City
+	State
+	Zip
+
+Repair:
+	*Owner
+	Model
+	Type
+	Model Number
+	Serial Number
+	Description
+	Notes
+	

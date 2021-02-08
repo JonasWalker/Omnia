@@ -195,7 +195,8 @@ namespace Omnia
             this.Controls.Add(this.PartDescription);
             this.Controls.Add(this.NameLabel);
             this.Name = "PartsLookUp";
-            this.Text = "PartsLookUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Parts";
             this.Load += new System.EventHandler(this.PartsLookUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

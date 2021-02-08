@@ -29,18 +29,31 @@
         private void InitializeComponent()
         {
             this.OMNIA = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerLookUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.partsLookUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.repairLookUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffOmniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timesheetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // OMNIA
@@ -55,10 +68,21 @@
             this.OMNIA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.OMNIA.UseWaitCursor = true;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Omnia.Properties.Resources.Parts_Lookup_Symbol;
+            this.pictureBox6.Location = new System.Drawing.Point(64, 31);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Omnia.Properties.Resources.Settings_Symbol1;
-            this.pictureBox5.Location = new System.Drawing.Point(731, 1);
+            this.pictureBox5.Location = new System.Drawing.Point(731, 31);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(57, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +93,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Omnia.Properties.Resources.Timesheet_Symbol;
-            this.pictureBox4.Location = new System.Drawing.Point(253, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(253, 31);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +104,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Omnia.Properties.Resources.Reports_Symbol;
-            this.pictureBox3.Location = new System.Drawing.Point(190, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(190, 31);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(57, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,7 +115,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Omnia.Properties.Resources.Repair_Lookup_Symbol;
-            this.pictureBox2.Location = new System.Drawing.Point(127, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(127, 31);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Omnia.Properties.Resources.Customer_Lookup_Symbol;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,16 +134,101 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox6
+            // menuStrip1
             // 
-            this.pictureBox6.Image = global::Omnia.Properties.Resources.Parts_Lookup_Symbol;
-            this.pictureBox6.Location = new System.Drawing.Point(64, 1);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(57, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userToolStripMenuItem,
+            this.menuToolStripMenuItem1,
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerLookUpToolStripMenuItem1,
+            this.partsLookUpToolStripMenuItem1,
+            this.repairLookUpToolStripMenuItem1});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.menuToolStripMenuItem.Text = "Look Ups";
+            // 
+            // customerLookUpToolStripMenuItem1
+            // 
+            this.customerLookUpToolStripMenuItem1.Name = "customerLookUpToolStripMenuItem1";
+            this.customerLookUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.customerLookUpToolStripMenuItem1.Text = "Customers";
+            this.customerLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // partsLookUpToolStripMenuItem1
+            // 
+            this.partsLookUpToolStripMenuItem1.Name = "partsLookUpToolStripMenuItem1";
+            this.partsLookUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.partsLookUpToolStripMenuItem1.Text = "Parts";
+            this.partsLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // repairLookUpToolStripMenuItem1
+            // 
+            this.repairLookUpToolStripMenuItem1.Name = "repairLookUpToolStripMenuItem1";
+            this.repairLookUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.repairLookUpToolStripMenuItem1.Text = "Repairs";
+            this.repairLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // menuToolStripMenuItem1
+            // 
+            this.menuToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportsToolStripMenuItem,
+            this.settingsToolStripMenuItem});
+            this.menuToolStripMenuItem1.Name = "menuToolStripMenuItem1";
+            this.menuToolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem1.Text = "Menu";
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // userToolStripMenuItem
+            // 
+            this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timesheetToolStripMenuItem1,
+            this.logOffUserToolStripMenuItem,
+            this.logOffOmniaToolStripMenuItem});
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.userToolStripMenuItem.Text = "User";
+            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
+            // 
+            // logOffUserToolStripMenuItem
+            // 
+            this.logOffUserToolStripMenuItem.Name = "logOffUserToolStripMenuItem";
+            this.logOffUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOffUserToolStripMenuItem.Text = "Log Off User";
+            // 
+            // logOffOmniaToolStripMenuItem
+            // 
+            this.logOffOmniaToolStripMenuItem.Name = "logOffOmniaToolStripMenuItem";
+            this.logOffOmniaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOffOmniaToolStripMenuItem.Text = "Log Off Omnia";
+            // 
+            // timesheetToolStripMenuItem1
+            // 
+            this.timesheetToolStripMenuItem1.Name = "timesheetToolStripMenuItem1";
+            this.timesheetToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.timesheetToolStripMenuItem1.Text = "Timesheet";
+            this.timesheetToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Home
             // 
@@ -127,6 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.OMNIA);
             this.Controls.Add(this.pictureBox5);
@@ -134,15 +244,18 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Home";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Omnia";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +270,18 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label OMNIA;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerLookUpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem partsLookUpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem repairLookUpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem timesheetToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem logOffUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOffOmniaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

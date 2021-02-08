@@ -196,7 +196,8 @@
             this.Controls.Add(this.PhoneNumberLabel);
             this.Controls.Add(this.NameLabel);
             this.Name = "CustomerLookUp";
-            this.Text = "  ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Customers";
             this.Load += new System.EventHandler(this.CustomerLookUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

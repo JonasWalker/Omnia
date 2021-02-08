@@ -17,11 +17,6 @@ namespace Omnia
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             CustomerLookUp customerLookUp = new CustomerLookUp();
@@ -56,6 +51,16 @@ namespace Omnia
         {
             PartsLookUp partsLookUp = new PartsLookUp();
             partsLookUp.ShowDialog();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

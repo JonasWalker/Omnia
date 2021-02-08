@@ -43,11 +43,11 @@ namespace Omnia
             this.repairDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.repairModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.repairSerial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.repairNotes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BackButton = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.AllRepairs = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
-            this.repairNotes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // TagNumberTextBox
@@ -158,6 +158,11 @@ namespace Omnia
             this.repairSerial.Text = "Serial";
             this.repairSerial.Width = 103;
             // 
+            // repairNotes
+            // 
+            this.repairNotes.Text = "Notes";
+            this.repairNotes.Width = 224;
+            // 
             // BackButton
             // 
             this.BackButton.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -203,11 +208,6 @@ namespace Omnia
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // repairNotes
-            // 
-            this.repairNotes.Text = "Notes";
-            this.repairNotes.Width = 224;
-            // 
             // RepairLookUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,7 +225,8 @@ namespace Omnia
             this.Controls.Add(this.PhoneNumberLabel);
             this.Controls.Add(this.NameLabel);
             this.Name = "RepairLookUp";
-            this.Text = "Repair Look Up";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Repairs";
             this.ResumeLayout(false);
             this.PerformLayout();
 

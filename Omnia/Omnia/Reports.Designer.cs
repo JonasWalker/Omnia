@@ -49,7 +49,8 @@ namespace Omnia
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackButton);
             this.Name = "Reports";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Reports";
             this.ResumeLayout(false);
 
         }

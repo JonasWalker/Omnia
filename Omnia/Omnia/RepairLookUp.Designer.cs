@@ -227,6 +227,7 @@ namespace Omnia
             this.Name = "RepairLookUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repairs";
+            this.Load += new System.EventHandler(this.RepairLookUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

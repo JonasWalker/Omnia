@@ -29,3 +29,5 @@ C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\bin\Debug\MySql.Data.xml
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.PartsLookUp.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.csproj.CopyComplete
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.Settings.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.Login.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.ErrorMessage.resources

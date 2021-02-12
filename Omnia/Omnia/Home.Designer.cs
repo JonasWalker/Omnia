@@ -36,17 +36,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timesheetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffOmniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerLookUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.partsLookUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.repairLookUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOffUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOffOmniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timesheetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -146,36 +146,35 @@
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // menuToolStripMenuItem
+            // userToolStripMenuItem
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerLookUpToolStripMenuItem1,
-            this.partsLookUpToolStripMenuItem1,
-            this.repairLookUpToolStripMenuItem1});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.menuToolStripMenuItem.Text = "Look Ups";
+            this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timesheetToolStripMenuItem1,
+            this.logOffUserToolStripMenuItem,
+            this.logOffOmniaToolStripMenuItem});
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.userToolStripMenuItem.Text = "User";
+            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
-            // customerLookUpToolStripMenuItem1
+            // timesheetToolStripMenuItem1
             // 
-            this.customerLookUpToolStripMenuItem1.Name = "customerLookUpToolStripMenuItem1";
-            this.customerLookUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.customerLookUpToolStripMenuItem1.Text = "Customers";
-            this.customerLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.timesheetToolStripMenuItem1.Name = "timesheetToolStripMenuItem1";
+            this.timesheetToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.timesheetToolStripMenuItem1.Text = "Timesheet";
+            this.timesheetToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // partsLookUpToolStripMenuItem1
+            // logOffUserToolStripMenuItem
             // 
-            this.partsLookUpToolStripMenuItem1.Name = "partsLookUpToolStripMenuItem1";
-            this.partsLookUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.partsLookUpToolStripMenuItem1.Text = "Parts";
-            this.partsLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.logOffUserToolStripMenuItem.Name = "logOffUserToolStripMenuItem";
+            this.logOffUserToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.logOffUserToolStripMenuItem.Text = "Log Off User";
             // 
-            // repairLookUpToolStripMenuItem1
+            // logOffOmniaToolStripMenuItem
             // 
-            this.repairLookUpToolStripMenuItem1.Name = "repairLookUpToolStripMenuItem1";
-            this.repairLookUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.repairLookUpToolStripMenuItem1.Text = "Repairs";
-            this.repairLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.logOffOmniaToolStripMenuItem.Name = "logOffOmniaToolStripMenuItem";
+            this.logOffOmniaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.logOffOmniaToolStripMenuItem.Text = "Log Off Omnia";
             // 
             // menuToolStripMenuItem1
             // 
@@ -189,46 +188,47 @@
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // userToolStripMenuItem
+            // menuToolStripMenuItem
             // 
-            this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.timesheetToolStripMenuItem1,
-            this.logOffUserToolStripMenuItem,
-            this.logOffOmniaToolStripMenuItem});
-            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-            this.userToolStripMenuItem.Text = "User";
-            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerLookUpToolStripMenuItem1,
+            this.partsLookUpToolStripMenuItem1,
+            this.repairLookUpToolStripMenuItem1});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.menuToolStripMenuItem.Text = "Look Ups";
             // 
-            // logOffUserToolStripMenuItem
+            // customerLookUpToolStripMenuItem1
             // 
-            this.logOffUserToolStripMenuItem.Name = "logOffUserToolStripMenuItem";
-            this.logOffUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logOffUserToolStripMenuItem.Text = "Log Off User";
+            this.customerLookUpToolStripMenuItem1.Name = "customerLookUpToolStripMenuItem1";
+            this.customerLookUpToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.customerLookUpToolStripMenuItem1.Text = "Customers";
+            this.customerLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // logOffOmniaToolStripMenuItem
+            // partsLookUpToolStripMenuItem1
             // 
-            this.logOffOmniaToolStripMenuItem.Name = "logOffOmniaToolStripMenuItem";
-            this.logOffOmniaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logOffOmniaToolStripMenuItem.Text = "Log Off Omnia";
+            this.partsLookUpToolStripMenuItem1.Name = "partsLookUpToolStripMenuItem1";
+            this.partsLookUpToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.partsLookUpToolStripMenuItem1.Text = "Parts";
+            this.partsLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // timesheetToolStripMenuItem1
+            // repairLookUpToolStripMenuItem1
             // 
-            this.timesheetToolStripMenuItem1.Name = "timesheetToolStripMenuItem1";
-            this.timesheetToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.timesheetToolStripMenuItem1.Text = "Timesheet";
-            this.timesheetToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.repairLookUpToolStripMenuItem1.Name = "repairLookUpToolStripMenuItem1";
+            this.repairLookUpToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.repairLookUpToolStripMenuItem1.Text = "Repairs";
+            this.repairLookUpToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Home
             // 
@@ -248,6 +248,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Omnia";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

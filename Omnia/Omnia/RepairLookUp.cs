@@ -60,5 +60,10 @@ namespace Omnia
                 RepairListView.Items.Add(item);
             }
         }
+
+        private void RepairLookUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

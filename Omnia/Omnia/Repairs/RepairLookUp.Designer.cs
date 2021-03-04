@@ -48,6 +48,8 @@ namespace Omnia
             this.Clear = new System.Windows.Forms.Button();
             this.AllRepairs = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
+            this.DeleteRepairBtton = new System.Windows.Forms.Button();
+            this.CreateRepairButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TagNumberTextBox
@@ -115,6 +117,7 @@ namespace Omnia
             this.repairModel,
             this.repairSerial,
             this.repairNotes});
+            this.RepairListView.FullRowSelect = true;
             this.RepairListView.HideSelection = false;
             this.RepairListView.Location = new System.Drawing.Point(12, 70);
             this.RepairListView.Name = "RepairListView";
@@ -208,11 +211,35 @@ namespace Omnia
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
+            // DeleteRepairBtton
+            // 
+            this.DeleteRepairBtton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteRepairBtton.Location = new System.Drawing.Point(759, 554);
+            this.DeleteRepairBtton.Name = "DeleteRepairBtton";
+            this.DeleteRepairBtton.Size = new System.Drawing.Size(129, 30);
+            this.DeleteRepairBtton.TabIndex = 30;
+            this.DeleteRepairBtton.Text = "Delete Repair";
+            this.DeleteRepairBtton.UseVisualStyleBackColor = true;
+            this.DeleteRepairBtton.Click += new System.EventHandler(this.DeleteRepairBtton_Click);
+            // 
+            // CreateRepairButton
+            // 
+            this.CreateRepairButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateRepairButton.Location = new System.Drawing.Point(621, 554);
+            this.CreateRepairButton.Name = "CreateRepairButton";
+            this.CreateRepairButton.Size = new System.Drawing.Size(132, 30);
+            this.CreateRepairButton.TabIndex = 29;
+            this.CreateRepairButton.Text = "Create Repair";
+            this.CreateRepairButton.UseVisualStyleBackColor = true;
+            this.CreateRepairButton.Click += new System.EventHandler(this.CreateRepairButton_Click);
+            // 
             // RepairLookUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 596);
+            this.Controls.Add(this.DeleteRepairBtton);
+            this.Controls.Add(this.CreateRepairButton);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.AllRepairs);
             this.Controls.Add(this.Clear);
@@ -254,5 +281,7 @@ namespace Omnia
         private System.Windows.Forms.Button AllRepairs;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.ColumnHeader repairNotes;
+        private System.Windows.Forms.Button DeleteRepairBtton;
+        private System.Windows.Forms.Button CreateRepairButton;
     }
 }

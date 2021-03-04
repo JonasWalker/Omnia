@@ -31,3 +31,8 @@ C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.csproj.C
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.Settings.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.Login.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.ErrorMessage.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewPart.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.DeleteMessage.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewCustomer.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewRepair.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewSale.resources

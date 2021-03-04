@@ -67,5 +67,29 @@ namespace Omnia
         {
 
         }
+
+        private void partToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewPart newPart = new NewPart();
+            newPart.ShowDialog();
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewCustomer newCustomer = new NewCustomer();
+            newCustomer.ShowDialog();
+        }
+
+        private void repairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewRepair newRepair = new NewRepair();
+            newRepair.ShowDialog();
+        }
+
+        private void saleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewSale newSale = new NewSale();
+            newSale.ShowDialog();
+        }
     }
 }

@@ -17,10 +17,5 @@ namespace Omnia
             InitializeComponent();
             ErrorText.Text = errorMessage;
         }
-
-        private void ErrorMessage_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

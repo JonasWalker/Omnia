@@ -44,6 +44,8 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.AllCustomersButton = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
+            this.DeleteCustomerButton = new System.Windows.Forms.Button();
+            this.CreateCustomerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -92,6 +94,7 @@
             this.customerAddress,
             this.customerZIPCode,
             this.customerState});
+            this.CustomerListView.FullRowSelect = true;
             this.CustomerListView.HideSelection = false;
             this.CustomerListView.Location = new System.Drawing.Point(17, 67);
             this.CustomerListView.Name = "CustomerListView";
@@ -180,12 +183,36 @@
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
+            // DeleteCustomerButton
+            // 
+            this.DeleteCustomerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteCustomerButton.Location = new System.Drawing.Point(760, 517);
+            this.DeleteCustomerButton.Name = "DeleteCustomerButton";
+            this.DeleteCustomerButton.Size = new System.Drawing.Size(129, 30);
+            this.DeleteCustomerButton.TabIndex = 28;
+            this.DeleteCustomerButton.Text = "Delete Customer";
+            this.DeleteCustomerButton.UseVisualStyleBackColor = true;
+            this.DeleteCustomerButton.Click += new System.EventHandler(this.DeleteCustomerButton_Click);
+            // 
+            // CreateCustomerButton
+            // 
+            this.CreateCustomerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateCustomerButton.Location = new System.Drawing.Point(622, 517);
+            this.CreateCustomerButton.Name = "CreateCustomerButton";
+            this.CreateCustomerButton.Size = new System.Drawing.Size(132, 30);
+            this.CreateCustomerButton.TabIndex = 27;
+            this.CreateCustomerButton.Text = "Create Customer";
+            this.CreateCustomerButton.UseVisualStyleBackColor = true;
+            this.CreateCustomerButton.Click += new System.EventHandler(this.CreateCustomerButton_Click);
+            // 
             // CustomerLookUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1069, 563);
+            this.Controls.Add(this.DeleteCustomerButton);
+            this.Controls.Add(this.CreateCustomerButton);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.AllCustomersButton);
             this.Controls.Add(this.BackButton);
@@ -221,5 +248,7 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button AllCustomersButton;
         private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Button DeleteCustomerButton;
+        private System.Windows.Forms.Button CreateCustomerButton;
     }
 }

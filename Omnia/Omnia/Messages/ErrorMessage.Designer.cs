@@ -49,9 +49,10 @@ namespace Omnia
             this.ErrorText.BackColor = System.Drawing.SystemColors.Control;
             this.ErrorText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ErrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorText.Location = new System.Drawing.Point(12, 35);
+            this.ErrorText.Location = new System.Drawing.Point(36, 12);
+            this.ErrorText.Multiline = true;
             this.ErrorText.Name = "ErrorText";
-            this.ErrorText.Size = new System.Drawing.Size(250, 17);
+            this.ErrorText.Size = new System.Drawing.Size(200, 60);
             this.ErrorText.TabIndex = 24;
             this.ErrorText.Text = "Error";
             this.ErrorText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -70,7 +71,6 @@ namespace Omnia
             this.Name = "ErrorMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ErrorMessage";
-            this.Load += new System.EventHandler(this.ErrorMessage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

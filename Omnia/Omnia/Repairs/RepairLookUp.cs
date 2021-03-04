@@ -65,5 +65,31 @@ namespace Omnia
         {
 
         }
+
+        private void CreateRepairButton_Click(object sender, EventArgs e)
+        {
+            NewRepair newRepair = new NewRepair();
+            newRepair.ShowDialog();
+            if (newRepair.DialogResult == DialogResult.OK)
+            {
+                LoadAll();
+            }
+        }
+
+        private void DeleteRepairBtton_Click(object sender, EventArgs e)
+        {
+            DeleteMessage message = new DeleteMessage("Are you sure you want to delete the selected customer(s)?");
+            message.ShowDialog();
+            if (message.DialogResult == DialogResult.OK)
+            {
+                DeleteRepair deleteRepair = new DeleteRepair();
+                for (int i = 0; i < RepairListView.SelectedItems.Count; i++)
+                {
+                    String temp = RepairListView.SelectedItems[i].SubItems[0].Text;
+                    deleteRepair.DeleteSelectedParts(temp);
+                }
+                LoadAll();
+            }
+        }
     }
 }

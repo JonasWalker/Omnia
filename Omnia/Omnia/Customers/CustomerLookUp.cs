@@ -66,5 +66,31 @@ namespace Omnia
                 CustomerListView.Items.Add(item);
             }
         }
+
+        private void CreateCustomerButton_Click(object sender, EventArgs e)
+        {
+            NewCustomer newCustomer = new NewCustomer();
+            newCustomer.ShowDialog();
+            if (newCustomer.DialogResult == DialogResult.OK)
+            {
+                LoadAll();
+            }
+        }
+
+        private void DeleteCustomerButton_Click(object sender, EventArgs e)
+        {
+            DeleteMessage message = new DeleteMessage("Are you sure you want to delete the selected customer(s)?");
+            message.ShowDialog();
+            if (message.DialogResult == DialogResult.OK)
+            {
+                DeleteCustomer deleteCustomer = new DeleteCustomer();
+                for (int i = 0; i < CustomerListView.SelectedItems.Count; i++)
+                {
+                    String temp = CustomerListView.SelectedItems[i].SubItems[0].Text;
+                    deleteCustomer.DeleteSelectedParts(temp);
+                }
+                LoadAll();
+            }
+        }
     }
 }

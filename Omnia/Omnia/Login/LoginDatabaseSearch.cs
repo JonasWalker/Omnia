@@ -18,6 +18,7 @@ namespace Omnia
         public String idusers { get; private set; }
         public String userFirstName { get; private set; }
         public String userLastName { get; private set; }
+        public String userUsername { get; private set; }
         public String userPassword { get; private set; }
         public String userRole { get; private set; }
 
@@ -41,37 +42,12 @@ namespace Omnia
             Console.WriteLine(connString);
             dbConn = new MySqlConnection(connString);
         }
-        public static int Login(String text, String text2)
+        public static int Login(String text = null, String text2 = null)
         {
             List<LoginDatabaseSearch> user = new List<LoginDatabaseSearch>();
             String query;
 
-
-            if (text == null && text2 == null)
-            {
-                //both username and password are null
-                return 1;   
-            }
-            else if(text != null && text2 == null)
-            {
-                //password is null
-                return 2;   
-            }
-            else if(text == null && text2 != null)
-            {
-                //username is null
-                return 3;
-            }
-            else if(text != null && text2 != null)
-            {
-                //all good. search for the username
-                query = "SELECT * FROM omnia.users where username = \"%" + text + "%\";";
-            }
-            else
-            {
-                //something went wrong
-                return 4;
-            }
+            query = "SELECT * FROM omnia.users where username = \"" + text + "\";";
 
             MySqlCommand cmd = new MySqlCommand(query, dbConn);
             dbConn.Open();
@@ -81,6 +57,7 @@ namespace Omnia
             String idusers = "";
             String userFirstName = "";
             String userLastName = "";
+            String userUsername = "";
             String userPassword = "";
             String userRole = "";
 
@@ -89,32 +66,31 @@ namespace Omnia
                 idusers = reader["idusers"].ToString();
                 userFirstName = reader["userFirstName"].ToString();
                 userLastName = reader["userLastName"].ToString();
-                userPassword = reader["userPassword"].ToString();
+                userUsername = reader["username"].ToString();
+                userPassword = reader["password"].ToString();
                 userRole = reader["userRole"].ToString();
                 LoginDatabaseSearch u = new LoginDatabaseSearch(idusers, userFirstName, userLastName, userPassword, userRole);
 
                 user.Add(u);
             }
             dbConn.Close();
-
-            //LoginDatabaseSearch u = new LoginDatabaseSearch(idusers, userFirstName, userLastName, userPassword, userRole);
-
-            //customers.Add(u);
-
-            //if(u.userPassword == passsword)
-            //{
-            //    //username and password is correct
-            //    return 0;
-            //}
-
-            if (userPassword == text2)
+            if(userUsername != text)
+            {
+                //incorrect username
+                return 1;
+            }
+            if (userPassword != text2)
+            {
+                //incorrect password
+                return 2;
+            }
+            if (userUsername == text && userPassword == text2)
             {
                 //username and password is correct
                 return 0;
             }
 
-
-
+            //4 = something went wrong
             return 4;
         }
     }

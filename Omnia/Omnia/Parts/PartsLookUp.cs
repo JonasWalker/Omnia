@@ -25,8 +25,6 @@ namespace Omnia
             PartNumberTextBox.Text = text;
             PartDescriptionTextBox.Text = text2;
             SearchForPart();
-
-
         }
 
         private void PartsLookUp_Load(object sender, EventArgs e)

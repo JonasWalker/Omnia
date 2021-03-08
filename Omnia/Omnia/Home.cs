@@ -91,5 +91,11 @@ namespace Omnia
             NewSale newSale = new NewSale();
             newSale.ShowDialog();
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            NewSale newSale = new NewSale();
+            newSale.ShowDialog();
+        }
     }
 }

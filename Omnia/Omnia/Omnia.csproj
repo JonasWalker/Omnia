@@ -127,11 +127,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectPartLookUp.cs">
+    <Compile Include="Parts\SelectPartLookUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectPartLookUp.Designer.cs">
+    <Compile Include="Parts\SelectPartLookUp.Designer.cs">
       <DependentUpon>SelectPartLookUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\SelectCustomerLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\SelectCustomerLookUp.Designer.cs">
+      <DependentUpon>SelectCustomerLookUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
@@ -192,8 +198,11 @@
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectPartLookUp.resx">
+    <EmbeddedResource Include="Parts\SelectPartLookUp.resx">
       <DependentUpon>SelectPartLookUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\SelectCustomerLookUp.resx">
+      <DependentUpon>SelectCustomerLookUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -234,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Settings Symbol1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Sale Lookup Symbol.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

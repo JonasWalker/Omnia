@@ -36,3 +36,5 @@ C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.DeleteMe
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewCustomer.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewRepair.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewSale.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.SelectPartLookUp.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.SelectCustomerLookUp.resources

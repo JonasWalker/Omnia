@@ -55,6 +55,7 @@ namespace Omnia
             this.SearchButton.TabIndex = 29;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // PartsListView
             // 
@@ -68,7 +69,7 @@ namespace Omnia
             this.partNote});
             this.PartsListView.FullRowSelect = true;
             this.PartsListView.HideSelection = false;
-            this.PartsListView.Location = new System.Drawing.Point(12, 52);
+            this.PartsListView.Location = new System.Drawing.Point(28, 52);
             this.PartsListView.Name = "PartsListView";
             this.PartsListView.Size = new System.Drawing.Size(993, 400);
             this.PartsListView.TabIndex = 28;
@@ -148,6 +149,7 @@ namespace Omnia
             // 
             // BackButton
             // 
+            this.BackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.Location = new System.Drawing.Point(946, 480);
             this.BackButton.Name = "BackButton";
@@ -165,6 +167,7 @@ namespace Omnia
             this.SelectButton.TabIndex = 31;
             this.SelectButton.Text = "Select";
             this.SelectButton.UseVisualStyleBackColor = true;
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // SelectPartLookUp
             // 
@@ -181,7 +184,9 @@ namespace Omnia
             this.Controls.Add(this.PartDescriptionLabel);
             this.Controls.Add(this.PartNumberLabel);
             this.Name = "SelectPartLookUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectPartLookUp";
+            this.Load += new System.EventHandler(this.SelectPartLookUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -103,6 +103,16 @@ namespace Omnia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sale_Lookup_Symbol {
+            get {
+                object obj = ResourceManager.GetObject("Sale Lookup Symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Settings_Symbol {
             get {
                 object obj = ResourceManager.GetObject("Settings Symbol", resourceCulture);

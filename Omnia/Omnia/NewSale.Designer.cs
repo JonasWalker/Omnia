@@ -29,7 +29,7 @@ namespace Omnia
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.PartsListView = new System.Windows.Forms.ListView();
             this.idparts = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.partNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.partDescription1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,7 +37,7 @@ namespace Omnia
             this.partMSRP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.partCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.partNote = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Search = new System.Windows.Forms.Button();
+            this.PartSearchButton = new System.Windows.Forms.Button();
             this.PartDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.PartNumberTextBox = new System.Windows.Forms.TextBox();
             this.PartDescriptionLabel = new System.Windows.Forms.Label();
@@ -50,11 +50,13 @@ namespace Omnia
             this.BackButton = new System.Windows.Forms.Button();
             this.TotalOutButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
+            this.ClearListButton = new System.Windows.Forms.Button();
+            this.DeletePartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // PartsListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PartsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.idparts,
             this.partNumber,
             this.partDescription1,
@@ -62,14 +64,14 @@ namespace Omnia
             this.partMSRP,
             this.partCost,
             this.partNote});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(35, 135);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(993, 346);
-            this.listView1.TabIndex = 20;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.PartsListView.FullRowSelect = true;
+            this.PartsListView.HideSelection = false;
+            this.PartsListView.Location = new System.Drawing.Point(35, 134);
+            this.PartsListView.Name = "PartsListView";
+            this.PartsListView.Size = new System.Drawing.Size(993, 369);
+            this.PartsListView.TabIndex = 20;
+            this.PartsListView.UseCompatibleStateImageBehavior = false;
+            this.PartsListView.View = System.Windows.Forms.View.Details;
             // 
             // idparts
             // 
@@ -106,16 +108,16 @@ namespace Omnia
             this.partNote.Text = "Notes";
             this.partNote.Width = 261;
             // 
-            // Search
+            // PartSearchButton
             // 
-            this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search.Location = new System.Drawing.Point(953, 82);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(75, 30);
-            this.Search.TabIndex = 28;
-            this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = true;
-            this.Search.Click += new System.EventHandler(this.Search_Click);
+            this.PartSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PartSearchButton.Location = new System.Drawing.Point(953, 82);
+            this.PartSearchButton.Name = "PartSearchButton";
+            this.PartSearchButton.Size = new System.Drawing.Size(75, 30);
+            this.PartSearchButton.TabIndex = 28;
+            this.PartSearchButton.Text = "Search";
+            this.PartSearchButton.UseVisualStyleBackColor = true;
+            this.PartSearchButton.Click += new System.EventHandler(this.PartSearchButton_Click);
             // 
             // PartDescriptionTextBox
             // 
@@ -162,6 +164,7 @@ namespace Omnia
             this.CustomerSearchButton.TabIndex = 33;
             this.CustomerSearchButton.Text = "Search";
             this.CustomerSearchButton.UseVisualStyleBackColor = true;
+            this.CustomerSearchButton.Click += new System.EventHandler(this.CustomerSearchButton_Click);
             // 
             // CustomerPhoneNumberTextBox
             // 
@@ -201,8 +204,9 @@ namespace Omnia
             // 
             // BackButton
             // 
+            this.BackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(953, 509);
+            this.BackButton.Location = new System.Drawing.Point(953, 521);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 30);
             this.BackButton.TabIndex = 34;
@@ -212,7 +216,7 @@ namespace Omnia
             // TotalOutButton
             // 
             this.TotalOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalOutButton.Location = new System.Drawing.Point(872, 509);
+            this.TotalOutButton.Location = new System.Drawing.Point(116, 521);
             this.TotalOutButton.Name = "TotalOutButton";
             this.TotalOutButton.Size = new System.Drawing.Size(75, 30);
             this.TotalOutButton.TabIndex = 35;
@@ -222,19 +226,43 @@ namespace Omnia
             // PrintButton
             // 
             this.PrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintButton.Location = new System.Drawing.Point(35, 509);
+            this.PrintButton.Location = new System.Drawing.Point(35, 521);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(75, 30);
             this.PrintButton.TabIndex = 36;
             this.PrintButton.Text = "Print";
             this.PrintButton.UseVisualStyleBackColor = true;
             // 
+            // ClearListButton
+            // 
+            this.ClearListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearListButton.Location = new System.Drawing.Point(872, 521);
+            this.ClearListButton.Name = "ClearListButton";
+            this.ClearListButton.Size = new System.Drawing.Size(75, 30);
+            this.ClearListButton.TabIndex = 37;
+            this.ClearListButton.Text = "Clear";
+            this.ClearListButton.UseVisualStyleBackColor = true;
+            this.ClearListButton.Click += new System.EventHandler(this.ClearListButton_Click);
+            // 
+            // DeletePartButton
+            // 
+            this.DeletePartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeletePartButton.Location = new System.Drawing.Point(759, 521);
+            this.DeletePartButton.Name = "DeletePartButton";
+            this.DeletePartButton.Size = new System.Drawing.Size(107, 30);
+            this.DeletePartButton.TabIndex = 38;
+            this.DeletePartButton.Text = "Delete Part(s)";
+            this.DeletePartButton.UseVisualStyleBackColor = true;
+            this.DeletePartButton.Click += new System.EventHandler(this.DeletePartButton_Click);
+            // 
             // NewSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1069, 563);
+            this.Controls.Add(this.DeletePartButton);
+            this.Controls.Add(this.ClearListButton);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.TotalOutButton);
             this.Controls.Add(this.BackButton);
@@ -243,13 +271,14 @@ namespace Omnia
             this.Controls.Add(this.CustomerNameTextBox);
             this.Controls.Add(this.CustomerPhoneNumberLabel);
             this.Controls.Add(this.CustomerNameLabel);
-            this.Controls.Add(this.Search);
+            this.Controls.Add(this.PartSearchButton);
             this.Controls.Add(this.PartDescriptionTextBox);
             this.Controls.Add(this.PartNumberTextBox);
             this.Controls.Add(this.PartDescriptionLabel);
             this.Controls.Add(this.PartNumberLabel);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.PartsListView);
             this.Name = "NewSale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewSale";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -258,7 +287,7 @@ namespace Omnia
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView PartsListView;
         private System.Windows.Forms.ColumnHeader idparts;
         private System.Windows.Forms.ColumnHeader partNumber;
         private System.Windows.Forms.ColumnHeader partDescription1;
@@ -266,7 +295,7 @@ namespace Omnia
         private System.Windows.Forms.ColumnHeader partMSRP;
         private System.Windows.Forms.ColumnHeader partCost;
         private System.Windows.Forms.ColumnHeader partNote;
-        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Button PartSearchButton;
         private System.Windows.Forms.TextBox PartDescriptionTextBox;
         private System.Windows.Forms.TextBox PartNumberTextBox;
         private System.Windows.Forms.Label PartDescriptionLabel;
@@ -279,5 +308,7 @@ namespace Omnia
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button TotalOutButton;
         private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button ClearListButton;
+        private System.Windows.Forms.Button DeletePartButton;
     }
 }

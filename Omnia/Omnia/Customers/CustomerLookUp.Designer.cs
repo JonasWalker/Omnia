@@ -97,6 +97,7 @@
             this.CustomerListView.FullRowSelect = true;
             this.CustomerListView.HideSelection = false;
             this.CustomerListView.Location = new System.Drawing.Point(17, 67);
+            this.CustomerListView.MultiSelect = false;
             this.CustomerListView.Name = "CustomerListView";
             this.CustomerListView.Size = new System.Drawing.Size(1034, 430);
             this.CustomerListView.TabIndex = 20;

@@ -78,8 +78,13 @@ namespace Omnia
 
         private void SelectButton_Click(object sender, EventArgs e)
         {
-
-            selectedPart = new SelectedPart(PartsListView.SelectedItems[0].SubItems[0].Text,
+            if(PartsListView.SelectedItems.Count == 0)
+            {
+                this.Hide();
+            }
+            else
+            {
+                selectedPart = new SelectedPart(PartsListView.SelectedItems[0].SubItems[0].Text,
                 PartsListView.SelectedItems[0].SubItems[1].Text,
                 PartsListView.SelectedItems[0].SubItems[2].Text,
                 PartsListView.SelectedItems[0].SubItems[3].Text,
@@ -87,7 +92,8 @@ namespace Omnia
                 PartsListView.SelectedItems[0].SubItems[5].Text,
                 PartsListView.SelectedItems[0].SubItems[6].Text);
 
-            this.Hide();
+                this.Hide();
+            }
         }
     }
 }

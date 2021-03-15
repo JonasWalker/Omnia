@@ -52,6 +52,16 @@ namespace Omnia
             this.PrintButton = new System.Windows.Forms.Button();
             this.ClearListButton = new System.Windows.Forms.Button();
             this.DeletePartButton = new System.Windows.Forms.Button();
+            this.TotalItemLabel = new System.Windows.Forms.Label();
+            this.TotalCostLabel = new System.Windows.Forms.Label();
+            this.TaxLabel = new System.Windows.Forms.Label();
+            this.GrandTotalLabel = new System.Windows.Forms.Label();
+            this.TotalItemsTextBox = new System.Windows.Forms.TextBox();
+            this.GrandTotalTextBox = new System.Windows.Forms.TextBox();
+            this.TotalTaxTextBox = new System.Windows.Forms.TextBox();
+            this.TotalCostTextBox = new System.Windows.Forms.TextBox();
+            this.DiscountTextBox = new System.Windows.Forms.TextBox();
+            this.DiscountLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PartsListView
@@ -68,7 +78,7 @@ namespace Omnia
             this.PartsListView.HideSelection = false;
             this.PartsListView.Location = new System.Drawing.Point(35, 134);
             this.PartsListView.Name = "PartsListView";
-            this.PartsListView.Size = new System.Drawing.Size(993, 369);
+            this.PartsListView.Size = new System.Drawing.Size(993, 327);
             this.PartsListView.TabIndex = 20;
             this.PartsListView.UseCompatibleStateImageBehavior = false;
             this.PartsListView.View = System.Windows.Forms.View.Details;
@@ -101,7 +111,7 @@ namespace Omnia
             // partCost
             // 
             this.partCost.Text = "Cost";
-            this.partCost.Width = 126;
+            this.partCost.Width = 118;
             // 
             // partNote
             // 
@@ -222,6 +232,7 @@ namespace Omnia
             this.TotalOutButton.TabIndex = 35;
             this.TotalOutButton.Text = "Total Out";
             this.TotalOutButton.UseVisualStyleBackColor = true;
+            this.TotalOutButton.Click += new System.EventHandler(this.TotalOutButton_Click);
             // 
             // PrintButton
             // 
@@ -255,12 +266,128 @@ namespace Omnia
             this.DeletePartButton.UseVisualStyleBackColor = true;
             this.DeletePartButton.Click += new System.EventHandler(this.DeletePartButton_Click);
             // 
+            // TotalItemLabel
+            // 
+            this.TotalItemLabel.AutoSize = true;
+            this.TotalItemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalItemLabel.Location = new System.Drawing.Point(182, 476);
+            this.TotalItemLabel.Name = "TotalItemLabel";
+            this.TotalItemLabel.Size = new System.Drawing.Size(123, 25);
+            this.TotalItemLabel.TabIndex = 39;
+            this.TotalItemLabel.Text = "Total Items:";
+            // 
+            // TotalCostLabel
+            // 
+            this.TotalCostLabel.AutoSize = true;
+            this.TotalCostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCostLabel.Location = new System.Drawing.Point(371, 476);
+            this.TotalCostLabel.Name = "TotalCostLabel";
+            this.TotalCostLabel.Size = new System.Drawing.Size(66, 25);
+            this.TotalCostLabel.TabIndex = 40;
+            this.TotalCostLabel.Text = "Total:";
+            // 
+            // TaxLabel
+            // 
+            this.TaxLabel.AutoSize = true;
+            this.TaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaxLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TaxLabel.Location = new System.Drawing.Point(576, 476);
+            this.TaxLabel.Name = "TaxLabel";
+            this.TaxLabel.Size = new System.Drawing.Size(54, 25);
+            this.TaxLabel.TabIndex = 41;
+            this.TaxLabel.Text = "Tax:";
+            // 
+            // GrandTotalLabel
+            // 
+            this.GrandTotalLabel.AutoSize = true;
+            this.GrandTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrandTotalLabel.Location = new System.Drawing.Point(777, 476);
+            this.GrandTotalLabel.Name = "GrandTotalLabel";
+            this.GrandTotalLabel.Size = new System.Drawing.Size(131, 25);
+            this.GrandTotalLabel.TabIndex = 42;
+            this.GrandTotalLabel.Text = "Grand Total:";
+            // 
+            // TotalItemsTextBox
+            // 
+            this.TotalItemsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalItemsTextBox.Location = new System.Drawing.Point(305, 473);
+            this.TotalItemsTextBox.Name = "TotalItemsTextBox";
+            this.TotalItemsTextBox.ReadOnly = true;
+            this.TotalItemsTextBox.Size = new System.Drawing.Size(60, 31);
+            this.TotalItemsTextBox.TabIndex = 43;
+            this.TotalItemsTextBox.Text = "0";
+            this.TotalItemsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // GrandTotalTextBox
+            // 
+            this.GrandTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(914, 473);
+            this.GrandTotalTextBox.Name = "GrandTotalTextBox";
+            this.GrandTotalTextBox.ReadOnly = true;
+            this.GrandTotalTextBox.Size = new System.Drawing.Size(135, 31);
+            this.GrandTotalTextBox.TabIndex = 46;
+            this.GrandTotalTextBox.Text = "$000.00";
+            this.GrandTotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TotalTaxTextBox
+            // 
+            this.TotalTaxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTaxTextBox.Location = new System.Drawing.Point(636, 473);
+            this.TotalTaxTextBox.Name = "TotalTaxTextBox";
+            this.TotalTaxTextBox.ReadOnly = true;
+            this.TotalTaxTextBox.Size = new System.Drawing.Size(135, 31);
+            this.TotalTaxTextBox.TabIndex = 47;
+            this.TotalTaxTextBox.Text = "$000.00";
+            this.TotalTaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TotalCostTextBox
+            // 
+            this.TotalCostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCostTextBox.Location = new System.Drawing.Point(435, 473);
+            this.TotalCostTextBox.Name = "TotalCostTextBox";
+            this.TotalCostTextBox.ReadOnly = true;
+            this.TotalCostTextBox.Size = new System.Drawing.Size(135, 31);
+            this.TotalCostTextBox.TabIndex = 48;
+            this.TotalCostTextBox.Text = "$000.00";
+            this.TotalCostTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // DiscountTextBox
+            // 
+            this.DiscountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscountTextBox.Location = new System.Drawing.Point(116, 473);
+            this.DiscountTextBox.Name = "DiscountTextBox";
+            this.DiscountTextBox.Size = new System.Drawing.Size(60, 31);
+            this.DiscountTextBox.TabIndex = 50;
+            this.DiscountTextBox.Text = "0";
+            this.DiscountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.DiscountTextBox.Leave += new System.EventHandler(this.DiscountTextBox_Leave);
+            // 
+            // DiscountLabel
+            // 
+            this.DiscountLabel.AutoSize = true;
+            this.DiscountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscountLabel.Location = new System.Drawing.Point(8, 476);
+            this.DiscountLabel.Name = "DiscountLabel";
+            this.DiscountLabel.Size = new System.Drawing.Size(102, 25);
+            this.DiscountLabel.TabIndex = 49;
+            this.DiscountLabel.Text = "Discount:";
+            // 
             // NewSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1069, 563);
+            this.Controls.Add(this.DiscountTextBox);
+            this.Controls.Add(this.DiscountLabel);
+            this.Controls.Add(this.TotalCostTextBox);
+            this.Controls.Add(this.TotalTaxTextBox);
+            this.Controls.Add(this.GrandTotalTextBox);
+            this.Controls.Add(this.TotalItemsTextBox);
+            this.Controls.Add(this.GrandTotalLabel);
+            this.Controls.Add(this.TaxLabel);
+            this.Controls.Add(this.TotalCostLabel);
+            this.Controls.Add(this.TotalItemLabel);
             this.Controls.Add(this.DeletePartButton);
             this.Controls.Add(this.ClearListButton);
             this.Controls.Add(this.PrintButton);
@@ -279,7 +406,7 @@ namespace Omnia
             this.Controls.Add(this.PartsListView);
             this.Name = "NewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewSale";
+            this.Text = "New Sale";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +437,15 @@ namespace Omnia
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Button ClearListButton;
         private System.Windows.Forms.Button DeletePartButton;
+        private System.Windows.Forms.Label TotalItemLabel;
+        private System.Windows.Forms.Label TotalCostLabel;
+        private System.Windows.Forms.Label TaxLabel;
+        private System.Windows.Forms.Label GrandTotalLabel;
+        private System.Windows.Forms.TextBox TotalItemsTextBox;
+        private System.Windows.Forms.TextBox GrandTotalTextBox;
+        private System.Windows.Forms.TextBox TotalTaxTextBox;
+        private System.Windows.Forms.TextBox TotalCostTextBox;
+        private System.Windows.Forms.TextBox DiscountTextBox;
+        private System.Windows.Forms.Label DiscountLabel;
     }
 }

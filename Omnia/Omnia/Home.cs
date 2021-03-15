@@ -65,7 +65,9 @@ namespace Omnia
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
+            timer1.Interval = 100;
+            NameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
         }
 
         private void partToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +98,11 @@ namespace Omnia
         {
             NewSale newSale = new NewSale();
             newSale.ShowDialog();
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            DateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy, hh:mm tt");
         }
     }
 }

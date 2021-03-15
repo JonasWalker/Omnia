@@ -38,3 +38,5 @@ C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewRepai
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.NewSale.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.SelectPartLookUp.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.SelectCustomerLookUp.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.PaymentScreen.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.GiveChangeMessage.resources

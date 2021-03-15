@@ -22,6 +22,28 @@ namespace Omnia
         public String userPassword { get; private set; }
         public String userRole { get; private set; }
 
+        public static SelectedUser selectedUser;
+        
+        public struct SelectedUser
+        {
+            public String ID;
+            public String firstName;
+            public String lastName;
+            public String username;
+            public String password;
+            public String role;
+            
+            public SelectedUser(String _ID, String _firstName = null, String _lastName = null, String _username = null, String _password = null, String _role = null)
+            {
+                ID = _ID;
+                firstName = _firstName;
+                lastName = _lastName;
+                username = _username;
+                password = _password;
+                role = _role;
+            }
+        }
+
         private LoginDatabaseSearch(String id, String uF, String uL, String uP, String uR)
         {
             idusers = id;
@@ -86,6 +108,7 @@ namespace Omnia
             }
             if (userUsername == text && userPassword == text2)
             {
+                selectedUser = new SelectedUser(idusers, userFirstName, userLastName, userUsername, userPassword, userRole);
                 //username and password is correct
                 return 0;
             }

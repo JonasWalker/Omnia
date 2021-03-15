@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Customers\CustomersDatabaseSearch.cs" />
     <Compile Include="Customers\DeleteCustomer.cs" />
+    <Compile Include="GiveChangeMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveChangeMessage.Designer.cs">
+      <DependentUpon>GiveChangeMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Messages\DeleteMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,12 @@
       <DependentUpon>DeleteMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Parts\DeletePart.cs" />
+    <Compile Include="PaymentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentScreen.Designer.cs">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repairs\DeleteRepair.cs" />
     <Compile Include="Messages\ErrorMessage.cs">
       <SubType>Form</SubType>
@@ -155,6 +167,9 @@
     <EmbeddedResource Include="Customers\CustomerLookUp.resx">
       <DependentUpon>CustomerLookUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiveChangeMessage.resx">
+      <DependentUpon>GiveChangeMessage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Messages\DeleteMessage.resx">
       <DependentUpon>DeleteMessage.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Parts\NewPart.resx">
       <DependentUpon>NewPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Repairs\NewRepair.resx">
       <DependentUpon>NewRepair.cs</DependentUpon>

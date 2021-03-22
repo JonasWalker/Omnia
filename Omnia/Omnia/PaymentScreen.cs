@@ -43,11 +43,10 @@ namespace Omnia
             DoTheMathTextBoxes();
             GiveChangeMessage giveChangeMessage = new GiveChangeMessage("Change: $" + (addedAmount - grandTotal).ToString("0.00"));
             giveChangeMessage.ShowDialog();
-        }
-
-        private void CashTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
+            if(giveChangeMessage.DialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void CashTextBox_KeyPress(object sender, KeyPressEventArgs e)

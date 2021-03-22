@@ -407,6 +407,7 @@ namespace Omnia
             this.Name = "NewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Sale";
+            this.Load += new System.EventHandler(this.NewSale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

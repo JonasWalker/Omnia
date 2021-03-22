@@ -61,6 +61,7 @@ namespace Omnia
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(100, 20);
             this.UsernameLabel.TabIndex = 1;
+            this.UsernameLabel.Text = "jonaswalker";
             // 
             // PasswordLabel
             // 
@@ -68,6 +69,8 @@ namespace Omnia
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(100, 20);
             this.PasswordLabel.TabIndex = 2;
+            this.PasswordLabel.Text = "jonas1999";
+            this.PasswordLabel.UseSystemPasswordChar = true;
             // 
             // LoginButton
             // 

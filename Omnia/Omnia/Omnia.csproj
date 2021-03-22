@@ -49,10 +49,10 @@
   <ItemGroup>
     <Compile Include="Customers\CustomersDatabaseSearch.cs" />
     <Compile Include="Customers\DeleteCustomer.cs" />
-    <Compile Include="GiveChangeMessage.cs">
+    <Compile Include="Messages\GiveChangeMessage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiveChangeMessage.Designer.cs">
+    <Compile Include="Messages\GiveChangeMessage.Designer.cs">
       <DependentUpon>GiveChangeMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Messages\DeleteMessage.cs">
@@ -157,6 +157,7 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimesheetDatabaseSearch.cs" />
     <Compile Include="Timesheets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,7 +168,7 @@
     <EmbeddedResource Include="Customers\CustomerLookUp.resx">
       <DependentUpon>CustomerLookUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiveChangeMessage.resx">
+    <EmbeddedResource Include="Messages\GiveChangeMessage.resx">
       <DependentUpon>GiveChangeMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Messages\DeleteMessage.resx">

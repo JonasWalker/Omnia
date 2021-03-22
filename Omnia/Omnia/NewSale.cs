@@ -81,6 +81,7 @@ namespace Omnia
         {
             PaymentScreen paymentScreen = new PaymentScreen(grandTotal);
             paymentScreen.ShowDialog();
+            this.Close();
         }
         private void UpdateTextBoxes()
         {
@@ -115,6 +116,11 @@ namespace Omnia
         private void DiscountTextBox_Leave(object sender, EventArgs e)
         {
             UpdateTextBoxes();
+        }
+
+        private void NewSale_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

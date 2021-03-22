@@ -53,7 +53,6 @@ namespace Omnia
             this.CashTextBox.Size = new System.Drawing.Size(269, 31);
             this.CashTextBox.TabIndex = 28;
             this.CashTextBox.Text = "0.00";
-            this.CashTextBox.TextChanged += new System.EventHandler(this.CashTextBox_TextChanged);
             this.CashTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CashTextBox_KeyPress);
             this.CashTextBox.Leave += new System.EventHandler(this.CashTextBox_Leave);
             // 

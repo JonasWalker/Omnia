@@ -35,25 +35,26 @@ namespace Omnia
             // 
             // OKButton
             // 
+            this.OKButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.OKButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OKButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Location = new System.Drawing.Point(100, 100);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 30);
-            this.OKButton.TabIndex = 22;
+            this.OKButton.TabIndex = 0;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
             // 
             // ErrorText
             // 
-            this.ErrorText.BackColor = System.Drawing.SystemColors.Control;
+            this.ErrorText.BackColor = System.Drawing.Color.White;
             this.ErrorText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ErrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorText.Location = new System.Drawing.Point(36, 12);
             this.ErrorText.Multiline = true;
             this.ErrorText.Name = "ErrorText";
             this.ErrorText.Size = new System.Drawing.Size(200, 60);
-            this.ErrorText.TabIndex = 24;
+            this.ErrorText.TabIndex = 1;
             this.ErrorText.Text = "Error";
             this.ErrorText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -62,6 +63,7 @@ namespace Omnia
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(284, 161);
             this.Controls.Add(this.ErrorText);
             this.Controls.Add(this.OKButton);
@@ -70,7 +72,7 @@ namespace Omnia
             this.MinimizeBox = false;
             this.Name = "ErrorMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ErrorMessage";
+            this.Text = "Error Message";
             this.ResumeLayout(false);
             this.PerformLayout();
 

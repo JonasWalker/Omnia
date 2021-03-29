@@ -40,7 +40,7 @@ namespace Omnia
             public String fridayHours;
             public String saturdayHours;
 
-            public UserTimesheet(/*String _ID = null,*/ String _payRate = null, String _sundayHours = null, String _mondayHours = null, String _tuesdayHours = null, String _wednesdayHours = null,
+            public UserTimesheet( String _payRate = null, String _sundayHours = null, String _mondayHours = null, String _tuesdayHours = null, String _wednesdayHours = null,
                 String _thrusdayHours = null, String _fridayHours = null, String _saturdayHours = null)
             {
                 ID = LoginDatabaseSearch.selectedUser.ID;
@@ -106,10 +106,8 @@ namespace Omnia
                 String friday = reader["friday"].ToString();    
                 String saturday = reader["saturday"].ToString();
 
-                //TimesheetDatabaseSearch u = new TimesheetDatabaseSearch(payRate, sunday, monday, tuesday, wednesday, thrusday, friday, saturday);
                 userTimesheet = new UserTimesheet(payRate, sunday, monday, tuesday, wednesday, thrusday, friday, saturday);
 
-                //timesheet.Add(u);
             }
             dbConn.Close();
             return userTimesheet;

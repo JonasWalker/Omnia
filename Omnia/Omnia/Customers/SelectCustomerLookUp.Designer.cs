@@ -55,7 +55,7 @@ namespace Omnia
             this.Search.Location = new System.Drawing.Point(971, 8);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(75, 30);
-            this.Search.TabIndex = 32;
+            this.Search.TabIndex = 2;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
@@ -76,7 +76,7 @@ namespace Omnia
             this.CustomerListView.MultiSelect = false;
             this.CustomerListView.Name = "CustomerListView";
             this.CustomerListView.Size = new System.Drawing.Size(1034, 410);
-            this.CustomerListView.TabIndex = 31;
+            this.CustomerListView.TabIndex = 9;
             this.CustomerListView.UseCompatibleStateImageBehavior = false;
             this.CustomerListView.View = System.Windows.Forms.View.Details;
             // 
@@ -121,7 +121,7 @@ namespace Omnia
             this.CustomerPhoneNumberTextBox.Location = new System.Drawing.Point(496, 6);
             this.CustomerPhoneNumberTextBox.Name = "CustomerPhoneNumberTextBox";
             this.CustomerPhoneNumberTextBox.Size = new System.Drawing.Size(179, 31);
-            this.CustomerPhoneNumberTextBox.TabIndex = 30;
+            this.CustomerPhoneNumberTextBox.TabIndex = 1;
             // 
             // CustomerNameTextBox
             // 
@@ -129,7 +129,7 @@ namespace Omnia
             this.CustomerNameTextBox.Location = new System.Drawing.Point(78, 6);
             this.CustomerNameTextBox.Name = "CustomerNameTextBox";
             this.CustomerNameTextBox.Size = new System.Drawing.Size(257, 31);
-            this.CustomerNameTextBox.TabIndex = 29;
+            this.CustomerNameTextBox.TabIndex = 0;
             // 
             // PhoneNumberLabel
             // 
@@ -138,7 +138,7 @@ namespace Omnia
             this.PhoneNumberLabel.Location = new System.Drawing.Point(341, 9);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
             this.PhoneNumberLabel.Size = new System.Drawing.Size(161, 25);
-            this.PhoneNumberLabel.TabIndex = 28;
+            this.PhoneNumberLabel.TabIndex = 8;
             this.PhoneNumberLabel.Text = "Phone Number:";
             // 
             // CustomerNameLabel
@@ -148,7 +148,7 @@ namespace Omnia
             this.CustomerNameLabel.Location = new System.Drawing.Point(7, 9);
             this.CustomerNameLabel.Name = "CustomerNameLabel";
             this.CustomerNameLabel.Size = new System.Drawing.Size(74, 25);
-            this.CustomerNameLabel.TabIndex = 27;
+            this.CustomerNameLabel.TabIndex = 7;
             this.CustomerNameLabel.Text = "Name:";
             // 
             // BackButton
@@ -159,7 +159,7 @@ namespace Omnia
             this.BackButton.Location = new System.Drawing.Point(969, 480);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 30);
-            this.BackButton.TabIndex = 33;
+            this.BackButton.TabIndex = 6;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = false;
             // 
@@ -170,7 +170,7 @@ namespace Omnia
             this.ClearButton.Location = new System.Drawing.Point(888, 480);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(75, 30);
-            this.ClearButton.TabIndex = 34;
+            this.ClearButton.TabIndex = 5;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
@@ -182,7 +182,7 @@ namespace Omnia
             this.SelectButton.Location = new System.Drawing.Point(807, 480);
             this.SelectButton.Name = "SelectButton";
             this.SelectButton.Size = new System.Drawing.Size(75, 30);
-            this.SelectButton.TabIndex = 35;
+            this.SelectButton.TabIndex = 3;
             this.SelectButton.Text = "Select";
             this.SelectButton.UseVisualStyleBackColor = false;
             this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
@@ -193,9 +193,10 @@ namespace Omnia
             this.AllCustomersButton.Location = new System.Drawing.Point(12, 480);
             this.AllCustomersButton.Name = "AllCustomersButton";
             this.AllCustomersButton.Size = new System.Drawing.Size(109, 30);
-            this.AllCustomersButton.TabIndex = 36;
+            this.AllCustomersButton.TabIndex = 4;
             this.AllCustomersButton.Text = "All Customers";
             this.AllCustomersButton.UseVisualStyleBackColor = true;
+            this.AllCustomersButton.Click += new System.EventHandler(this.AllCustomersButton_Click);
             // 
             // SelectCustomerLookUp
             // 
@@ -213,7 +214,11 @@ namespace Omnia
             this.Controls.Add(this.CustomerNameTextBox);
             this.Controls.Add(this.PhoneNumberLabel);
             this.Controls.Add(this.CustomerNameLabel);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SelectCustomerLookUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectCustomerLookUp";
             this.Load += new System.EventHandler(this.SelectCustomerLookUp_Load);
             this.ResumeLayout(false);

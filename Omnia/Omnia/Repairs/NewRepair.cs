@@ -60,15 +60,16 @@ namespace Omnia
         private void CreateButton_Click(object sender, EventArgs e)
         {
             if (repairTagNumberTextBox.Text != "" && repairCustomerNameTextBox.Text != "" && repairCustomerPhoneNumberTextBox.Text != "" &&
-                repairDescriptionTextBox.Text != "" && repairModelTextBox.Text != "" && repairSerialTextBox.Text != "")
+                repairDescriptionTextBox.Text != "" && repairModelTextBox.Text != "" && repairSerialTextBox.Text != "" && repairNotesTextBox.Text != "")
             {
-                String query = "INSERT INTO omnia.repairs (repairID, repairTag, repairCustName, repairCustPhoneNumber, repairDescription, repairModel, repairSerial) " +
+                String query = "INSERT INTO omnia.repairs (repairID, repairTag, repairCustName, repairCustPhoneNumber, repairDescription, repairModel, repairSerial, repairNotes) " +
                     "VALUES (\'" + RepairIDTextBox.Text + "\',\'" + repairTagNumberTextBox.Text + "\',\'" + repairCustomerNameTextBox.Text + "\',\'" + repairCustomerPhoneNumberTextBox.Text + "\',\'"
-                    + repairDescriptionTextBox.Text + "\',\'" + repairModelTextBox.Text + "\',\'" + repairSerialTextBox.Text + "\');";
+                    + repairDescriptionTextBox.Text + "\',\'" + repairModelTextBox.Text + "\',\'" + repairSerialTextBox.Text + "\',\'"+ repairNotesTextBox.Text + "\');";
                 MySqlCommand cmd = new MySqlCommand(query, dbConn);
                 dbConn.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
                 dbConn.Close();
+                this.Close();
             }
             else
             {
@@ -85,6 +86,7 @@ namespace Omnia
             repairDescriptionTextBox.Text = "";
             repairModelTextBox.Text = "";
             repairSerialTextBox.Text = "";
+            repairNotesTextBox.Text = "";
         }
     }
 }

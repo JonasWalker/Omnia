@@ -57,12 +57,13 @@ namespace Omnia
                 MSRPTextBox.Text != "" && CostTextBox.Text != "" && NotesTextBox.Text != "")
             {
                 String query = "INSERT INTO omnia.parts (idparts, partNumber, partDescription, partQty, partMSRP, partCost, partNote) " +
-                    "VALUES (\'" + PartIDTextBox.Text + "\',\'" + PartNumberTextBox.Text + "\',\'" + PartDescriptionTextBox.Text + "\',\'" + PartQuantityTextBox.Text + "\',\'"
+                    "VALUES (\'" + PartIDTextBox.Text + "\','" + PartNumberTextBox.Text + "\',\'" + PartDescriptionTextBox.Text + "\',\'" + PartQuantityTextBox.Text + "\',\'"
                     + Convert.ToDecimal(MSRPTextBox.Text) + "\',\'" + Convert.ToDecimal(CostTextBox.Text) + "\',\'" + NotesTextBox.Text + "\');";
                 MySqlCommand cmd = new MySqlCommand(query, dbConn);                
                 dbConn.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
                 dbConn.Close();
+                this.Close();
             }
             else
             {
@@ -89,6 +90,87 @@ namespace Omnia
                 PartIDTextBox.Text = idparts.ToString();
             }
             dbConn.Close();
+        }
+
+        private void PartQuantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MSRPTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CostTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PartQuantityTextBox_Leave(object sender, EventArgs e)
+        {
+            if (PartQuantityTextBox.Text != "")
+            {
+                PartQuantityTextBox.Text = Convert.ToDouble(PartQuantityTextBox.Text).ToString("0.00");
+            }
+            else
+            {
+                PartQuantityTextBox.Text = "0.00";
+            }
+        }
+
+        private void MSRPTextBox_Leave(object sender, EventArgs e)
+        {
+            if (MSRPTextBox.Text != "")
+            {
+                MSRPTextBox.Text = Convert.ToDouble(MSRPTextBox.Text).ToString("0.00");
+            }
+            else
+            {
+                MSRPTextBox.Text = "0.00";
+            }
+        }
+
+        private void CostTextBox_Leave(object sender, EventArgs e)
+        {
+            if (CostTextBox.Text != "")
+            {
+                CostTextBox.Text = Convert.ToDouble(CostTextBox.Text).ToString("0.00");
+            }
+            else
+            {
+                CostTextBox.Text = "0.00";
+            }
         }
     }
 }

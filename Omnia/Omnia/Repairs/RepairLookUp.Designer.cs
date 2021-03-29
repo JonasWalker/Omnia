@@ -29,6 +29,7 @@ namespace Omnia
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TagNumberTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
@@ -50,6 +51,12 @@ namespace Omnia
             this.Search = new System.Windows.Forms.Button();
             this.DeleteRepairBtton = new System.Windows.Forms.Button();
             this.CreateRepairButton = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.DateLabel = new System.Windows.Forms.ToolStripLabel();
+            this.EmployeeNameLabel = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.EditButton = new System.Windows.Forms.Button();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TagNumberTextBox
@@ -58,7 +65,7 @@ namespace Omnia
             this.TagNumberTextBox.Location = new System.Drawing.Point(839, 23);
             this.TagNumberTextBox.Name = "TagNumberTextBox";
             this.TagNumberTextBox.Size = new System.Drawing.Size(113, 31);
-            this.TagNumberTextBox.TabIndex = 12;
+            this.TagNumberTextBox.TabIndex = 2;
             // 
             // PhoneNumberTextBox
             // 
@@ -66,7 +73,7 @@ namespace Omnia
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(512, 23);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(190, 31);
-            this.PhoneNumberTextBox.TabIndex = 11;
+            this.PhoneNumberTextBox.TabIndex = 1;
             // 
             // NameTextBox
             // 
@@ -74,7 +81,7 @@ namespace Omnia
             this.NameTextBox.Location = new System.Drawing.Point(94, 23);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(257, 31);
-            this.NameTextBox.TabIndex = 10;
+            this.NameTextBox.TabIndex = 0;
             // 
             // TagNumberLabel
             // 
@@ -83,7 +90,7 @@ namespace Omnia
             this.TagNumberLabel.Location = new System.Drawing.Point(708, 26);
             this.TagNumberLabel.Name = "TagNumberLabel";
             this.TagNumberLabel.Size = new System.Drawing.Size(136, 25);
-            this.TagNumberLabel.TabIndex = 9;
+            this.TagNumberLabel.TabIndex = 12;
             this.TagNumberLabel.Text = "Tag Number:";
             // 
             // PhoneNumberLabel
@@ -93,7 +100,7 @@ namespace Omnia
             this.PhoneNumberLabel.Location = new System.Drawing.Point(357, 26);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
             this.PhoneNumberLabel.Size = new System.Drawing.Size(161, 25);
-            this.PhoneNumberLabel.TabIndex = 8;
+            this.PhoneNumberLabel.TabIndex = 11;
             this.PhoneNumberLabel.Text = "Phone Number:";
             // 
             // NameLabel
@@ -103,7 +110,7 @@ namespace Omnia
             this.NameLabel.Location = new System.Drawing.Point(23, 26);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(74, 25);
-            this.NameLabel.TabIndex = 7;
+            this.NameLabel.TabIndex = 10;
             this.NameLabel.Text = "Name:";
             // 
             // RepairListView
@@ -121,8 +128,8 @@ namespace Omnia
             this.RepairListView.HideSelection = false;
             this.RepairListView.Location = new System.Drawing.Point(12, 70);
             this.RepairListView.Name = "RepairListView";
-            this.RepairListView.Size = new System.Drawing.Size(1038, 460);
-            this.RepairListView.TabIndex = 21;
+            this.RepairListView.Size = new System.Drawing.Size(1038, 453);
+            this.RepairListView.TabIndex = 4;
             this.RepairListView.UseCompatibleStateImageBehavior = false;
             this.RepairListView.View = System.Windows.Forms.View.Details;
             // 
@@ -170,10 +177,10 @@ namespace Omnia
             // 
             this.BackButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(975, 554);
+            this.BackButton.Location = new System.Drawing.Point(975, 529);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 30);
-            this.BackButton.TabIndex = 22;
+            this.BackButton.TabIndex = 9;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             // 
@@ -181,10 +188,10 @@ namespace Omnia
             // 
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Clear.Location = new System.Drawing.Point(894, 554);
+            this.Clear.Location = new System.Drawing.Point(894, 529);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 30);
-            this.Clear.TabIndex = 23;
+            this.Clear.TabIndex = 8;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
@@ -192,10 +199,10 @@ namespace Omnia
             // AllRepairs
             // 
             this.AllRepairs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllRepairs.Location = new System.Drawing.Point(12, 554);
+            this.AllRepairs.Location = new System.Drawing.Point(12, 529);
             this.AllRepairs.Name = "AllRepairs";
             this.AllRepairs.Size = new System.Drawing.Size(93, 30);
-            this.AllRepairs.TabIndex = 24;
+            this.AllRepairs.TabIndex = 6;
             this.AllRepairs.Text = "All Repairs";
             this.AllRepairs.UseVisualStyleBackColor = true;
             this.AllRepairs.Click += new System.EventHandler(this.AllRepairs_Click);
@@ -206,7 +213,7 @@ namespace Omnia
             this.Search.Location = new System.Drawing.Point(975, 25);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(75, 30);
-            this.Search.TabIndex = 25;
+            this.Search.TabIndex = 3;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
@@ -214,10 +221,10 @@ namespace Omnia
             // DeleteRepairBtton
             // 
             this.DeleteRepairBtton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteRepairBtton.Location = new System.Drawing.Point(759, 554);
+            this.DeleteRepairBtton.Location = new System.Drawing.Point(759, 529);
             this.DeleteRepairBtton.Name = "DeleteRepairBtton";
             this.DeleteRepairBtton.Size = new System.Drawing.Size(129, 30);
-            this.DeleteRepairBtton.TabIndex = 30;
+            this.DeleteRepairBtton.TabIndex = 7;
             this.DeleteRepairBtton.Text = "Delete Repair";
             this.DeleteRepairBtton.UseVisualStyleBackColor = true;
             this.DeleteRepairBtton.Click += new System.EventHandler(this.DeleteRepairBtton_Click);
@@ -225,19 +232,62 @@ namespace Omnia
             // CreateRepairButton
             // 
             this.CreateRepairButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateRepairButton.Location = new System.Drawing.Point(621, 554);
+            this.CreateRepairButton.Location = new System.Drawing.Point(483, 529);
             this.CreateRepairButton.Name = "CreateRepairButton";
             this.CreateRepairButton.Size = new System.Drawing.Size(132, 30);
-            this.CreateRepairButton.TabIndex = 29;
+            this.CreateRepairButton.TabIndex = 5;
             this.CreateRepairButton.Text = "Create Repair";
             this.CreateRepairButton.UseVisualStyleBackColor = true;
             this.CreateRepairButton.Click += new System.EventHandler(this.CreateRepairButton_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DateLabel,
+            this.EmployeeNameLabel});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 571);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1062, 25);
+            this.toolStrip1.TabIndex = 13;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(31, 22);
+            this.DateLabel.Text = "Date";
+            // 
+            // EmployeeNameLabel
+            // 
+            this.EmployeeNameLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
+            this.EmployeeNameLabel.Size = new System.Drawing.Size(39, 22);
+            this.EmployeeNameLabel.Text = "Name";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditButton.Location = new System.Drawing.Point(621, 529);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(132, 30);
+            this.EditButton.TabIndex = 14;
+            this.EditButton.Text = "Edit Repair";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // RepairLookUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1062, 596);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.DeleteRepairBtton);
             this.Controls.Add(this.CreateRepairButton);
             this.Controls.Add(this.Search);
@@ -251,10 +301,14 @@ namespace Omnia
             this.Controls.Add(this.TagNumberLabel);
             this.Controls.Add(this.PhoneNumberLabel);
             this.Controls.Add(this.NameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "RepairLookUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repairs";
             this.Load += new System.EventHandler(this.RepairLookUp_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +337,10 @@ namespace Omnia
         private System.Windows.Forms.ColumnHeader repairNotes;
         private System.Windows.Forms.Button DeleteRepairBtton;
         private System.Windows.Forms.Button CreateRepairButton;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel DateLabel;
+        private System.Windows.Forms.ToolStripLabel EmployeeNameLabel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button EditButton;
     }
 }

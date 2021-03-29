@@ -56,7 +56,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.DateLabel = new System.Windows.Forms.ToolStripLabel();
-            this.NameLabel = new System.Windows.Forms.ToolStripLabel();
+            this.EmployeeNameLabel = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -76,7 +76,7 @@
             this.OMNIA.Location = new System.Drawing.Point(232, 161);
             this.OMNIA.Name = "OMNIA";
             this.OMNIA.Size = new System.Drawing.Size(331, 77);
-            this.OMNIA.TabIndex = 5;
+            this.OMNIA.TabIndex = 1;
             this.OMNIA.Text = "OMNIA";
             this.OMNIA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.OMNIA.UseWaitCursor = true;
@@ -91,7 +91,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // userToolStripMenuItem
@@ -108,21 +108,23 @@
             // timesheetToolStripMenuItem1
             // 
             this.timesheetToolStripMenuItem1.Name = "timesheetToolStripMenuItem1";
-            this.timesheetToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.timesheetToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.timesheetToolStripMenuItem1.Text = "Timesheet";
             this.timesheetToolStripMenuItem1.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // logOffUserToolStripMenuItem
             // 
             this.logOffUserToolStripMenuItem.Name = "logOffUserToolStripMenuItem";
-            this.logOffUserToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.logOffUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOffUserToolStripMenuItem.Text = "Log Off User";
+            this.logOffUserToolStripMenuItem.Click += new System.EventHandler(this.logOffUserToolStripMenuItem_Click);
             // 
             // logOffOmniaToolStripMenuItem
             // 
             this.logOffOmniaToolStripMenuItem.Name = "logOffOmniaToolStripMenuItem";
-            this.logOffOmniaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.logOffOmniaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOffOmniaToolStripMenuItem.Text = "Log Off Omnia";
+            this.logOffOmniaToolStripMenuItem.Click += new System.EventHandler(this.logOffOmniaToolStripMenuItem_Click);
             // 
             // menuToolStripMenuItem1
             // 
@@ -299,11 +301,11 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DateLabel,
-            this.NameLabel});
+            this.EmployeeNameLabel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 425);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 10;
+            this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // DateLabel
@@ -312,12 +314,12 @@
             this.DateLabel.Size = new System.Drawing.Size(31, 22);
             this.DateLabel.Text = "Date";
             // 
-            // NameLabel
+            // EmployeeNameLabel
             // 
-            this.NameLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(39, 22);
-            this.NameLabel.Text = "Name";
+            this.EmployeeNameLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
+            this.EmployeeNameLabel.Size = new System.Drawing.Size(39, 22);
+            this.EmployeeNameLabel.Text = "Name";
             // 
             // timer1
             // 
@@ -339,7 +341,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Omnia";
@@ -389,7 +393,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel DateLabel;
-        private System.Windows.Forms.ToolStripLabel NameLabel;
+        private System.Windows.Forms.ToolStripLabel EmployeeNameLabel;
         private System.Windows.Forms.Timer timer1;
     }
 }

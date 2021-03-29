@@ -43,7 +43,7 @@ namespace Omnia
             this.UsernameText.Location = new System.Drawing.Point(294, 161);
             this.UsernameText.Name = "UsernameText";
             this.UsernameText.Size = new System.Drawing.Size(58, 13);
-            this.UsernameText.TabIndex = 0;
+            this.UsernameText.TabIndex = 4;
             this.UsernameText.Text = "Username:";
             // 
             // PasswordText
@@ -52,7 +52,7 @@ namespace Omnia
             this.PasswordText.Location = new System.Drawing.Point(296, 200);
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.Size = new System.Drawing.Size(56, 13);
-            this.PasswordText.TabIndex = 1;
+            this.PasswordText.TabIndex = 5;
             this.PasswordText.Text = "Password:";
             // 
             // UsernameLabel
@@ -60,16 +60,14 @@ namespace Omnia
             this.UsernameLabel.Location = new System.Drawing.Point(358, 158);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(100, 20);
-            this.UsernameLabel.TabIndex = 1;
-            this.UsernameLabel.Text = "jonaswalker";
+            this.UsernameLabel.TabIndex = 0;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.Location = new System.Drawing.Point(358, 197);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(100, 20);
-            this.PasswordLabel.TabIndex = 2;
-            this.PasswordLabel.Text = "jonas1999";
+            this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.UseSystemPasswordChar = true;
             // 
             // LoginButton
@@ -77,7 +75,7 @@ namespace Omnia
             this.LoginButton.Location = new System.Drawing.Point(339, 242);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
-            this.LoginButton.TabIndex = 3;
+            this.LoginButton.TabIndex = 2;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
@@ -89,7 +87,7 @@ namespace Omnia
             this.OMNIA.Location = new System.Drawing.Point(218, 56);
             this.OMNIA.Name = "OMNIA";
             this.OMNIA.Size = new System.Drawing.Size(331, 77);
-            this.OMNIA.TabIndex = 6;
+            this.OMNIA.TabIndex = 3;
             this.OMNIA.Text = "OMNIA";
             this.OMNIA.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.OMNIA.UseWaitCursor = true;
@@ -98,6 +96,7 @@ namespace Omnia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.OMNIA);
             this.Controls.Add(this.LoginButton);
@@ -105,6 +104,8 @@ namespace Omnia
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.PasswordText);
             this.Controls.Add(this.UsernameText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

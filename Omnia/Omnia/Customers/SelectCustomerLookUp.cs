@@ -85,16 +85,23 @@ namespace Omnia
         }
 
         public void SelectButton_Click(object sender, EventArgs e)
-        { 
-            selectedCustomer = new SelectedCustomer(CustomerListView.SelectedItems[0].SubItems[0].Text,
-                CustomerListView.SelectedItems[0].SubItems[1].Text,
-                CustomerListView.SelectedItems[0].SubItems[2].Text,
-                CustomerListView.SelectedItems[0].SubItems[3].Text,
-                CustomerListView.SelectedItems[0].SubItems[4].Text,
-                CustomerListView.SelectedItems[0].SubItems[5].Text,
-                CustomerListView.SelectedItems[0].SubItems[6].Text);
-
+        {
+            if(CustomerListView.SelectedItems.Count >= 1)
+            {
+                selectedCustomer = new SelectedCustomer(CustomerListView.SelectedItems[0].SubItems[0].Text,
+              CustomerListView.SelectedItems[0].SubItems[1].Text,
+              CustomerListView.SelectedItems[0].SubItems[2].Text,
+              CustomerListView.SelectedItems[0].SubItems[3].Text,
+              CustomerListView.SelectedItems[0].SubItems[4].Text,
+              CustomerListView.SelectedItems[0].SubItems[5].Text,
+              CustomerListView.SelectedItems[0].SubItems[6].Text);
+            }
             this.Hide();
+        }
+
+        private void AllCustomersButton_Click(object sender, EventArgs e)
+        {
+            SearchForCustomer();
         }
     }
 }

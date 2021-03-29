@@ -59,6 +59,7 @@ namespace Omnia
             PartsListView.Items.Clear();
             PartNumberTextBox.Text = "";
             PartDescriptionTextBox.Text = "";
+            UpdateTextBoxes();
         }
 
         private void DeletePartButton_Click(object sender, EventArgs e)
@@ -120,7 +121,14 @@ namespace Omnia
 
         private void NewSale_Load(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
+            timer1.Interval = 100;
+            EmployeeNameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
+        }
 
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            DateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy, hh:mm tt");
         }
     }
 }

@@ -60,15 +60,16 @@ namespace Omnia
         private void CreateButton_Click(object sender, EventArgs e)
         {
             if (customerNameTextBox.Text != "" && customerPhoneNumberTextBox.Text != "" && customerAltPhoneNumberTextBox.Text != "" &&
-                customerAddressTextBox.Text != "" && customerZIPTextBox.Text != "" && customerStateTextBox.Text != "")
+                customerAddressTextBox.Text != "" && customerZIPTextBox.Text != "" && customerStateTextBox.Text != "" && customerNotesTextBox.Text != "")
             {
-                String query = "INSERT INTO omnia.customers (idcustomers, customerName, customerPhoneNumber, customerAltPhoneNumber, customerAddress, customerZIPCode, customerState) " +
+                String query = "INSERT INTO omnia.customers (idcustomers, customerName, customerPhoneNumber, customerAltPhoneNumber, customerAddress, customerZIPCode, customerState, customerNotes) " +
                     "VALUES (\'" + PartIDTextBox.Text + "\',\'" + customerNameTextBox.Text + "\',\'" + customerPhoneNumberTextBox.Text + "\',\'" + customerAltPhoneNumberTextBox.Text + "\',\'"
-                    + customerAddressTextBox.Text + "\',\'" + customerZIPTextBox.Text + "\',\'" + customerStateTextBox.Text + "\');";
+                    + customerAddressTextBox.Text + "\',\'" + customerZIPTextBox.Text + "\',\'" + customerStateTextBox.Text + "\',\'" + customerNotesTextBox.Text + "\');";
                 MySqlCommand cmd = new MySqlCommand(query, dbConn);
                 dbConn.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
                 dbConn.Close();
+                this.Close();
             }
             else
             {
@@ -85,6 +86,7 @@ namespace Omnia
             customerAddressTextBox.Text = "";
             customerZIPTextBox.Text = "";
             customerStateTextBox.Text = "";
+            customerNotesTextBox.Text = "";
         }
     }
 }

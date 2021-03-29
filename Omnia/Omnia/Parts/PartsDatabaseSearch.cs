@@ -15,7 +15,6 @@ namespace Omnia
         private const String PASSWORD = "jonas1999";
         private static MySqlConnection dbConn;
 
-
         public String idparts { get; private set; }
         public String partNumber { get; private set; }
         public String partDescription { get; private set; }
@@ -23,6 +22,41 @@ namespace Omnia
         public String partMSRP { get; private set; }
         public String partCost { get; private set; }
         public String partNote { get; private set; }
+
+        public Part part { get; private set; }
+
+        public struct Part
+        {
+            public String partID;
+            public String partNumber;
+            public String partDescription;
+            public String partQty;
+            public String partMSRP;
+            public String partCost;
+            public String partNote;
+            public Part(String _partID = null, String _partNumber = null, String _partDescription = null, String _partQty = null, 
+                String _partMSRP = null, String _partCost = null, String _partNote = null)
+            {
+                partID = _partID;
+                partNumber = _partNumber;
+                partDescription = _partDescription;
+                partQty = _partQty;
+                partMSRP = _partMSRP;
+                partCost = _partCost;
+                partNote = _partNote;
+            }
+        }
+
+        public PartsDatabaseSearch()
+        {
+
+        }
+
+        public PartsDatabaseSearch(String _ID)
+        {
+            idparts = _ID;
+            GetSearchedPartID(_ID);
+        }
 
         private PartsDatabaseSearch(String id, String pNum, String pD, String pQ, String pM, String pC, String pN)
         {
@@ -121,6 +155,44 @@ namespace Omnia
             dbConn.Close();
 
             return parts;
+        }
+
+        public void GetSearchedPartID(String _ID)
+        {
+            String query = "SELECT * FROM omnia.parts WHERE idparts = " + _ID + ";";
+
+            MySqlCommand cmd = new MySqlCommand(query, dbConn);
+
+            dbConn.Open();
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                String idparts = reader["idparts"].ToString();
+                String partNumber = reader["partNumber"].ToString();
+                String partDescription = reader["partDescription"].ToString();
+                String partQty = reader["partQty"].ToString();
+                String partMSRP = reader["partMSRP"].ToString();
+                String partCost = reader["partCost"].ToString();
+                String partNote = reader["partNote"].ToString();
+
+                part = new Part(idparts, partNumber, partDescription, partQty, partMSRP, partCost, partNote);
+            }
+
+            dbConn.Close();
+
+        }
+
+        public void EditPartInfo(String _idpartrs, String _partNumber, String _partDescription, String _partQty, 
+            String _partMSRP, String _partCost, String _partNote)
+        {
+            String query = "UPDATE omnia.parts SET partNumber = \'" + _partNumber + "\', partDescription = \'" + _partDescription + "\', partQty = \'" + _partQty +
+                "\', partMSRP = \'" + _partMSRP + "\', partCost = \'" + _partCost + "\', partNote = \'" + _partNote + "\'WHERE idparts = " + _idpartrs + ";";
+            MySqlCommand cmd = new MySqlCommand(query, dbConn);
+            dbConn.Open();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            dbConn.Close();
         }
 
         public static PartsDatabaseSearch Insert(String u, String p)

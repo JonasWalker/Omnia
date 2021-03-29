@@ -95,5 +95,15 @@ namespace Omnia
                 this.Hide();
             }
         }
+
+        private void ClearListButton_Click(object sender, EventArgs e)
+        {
+            PartsListView.Items.Clear();
+        }
+
+        private void AllParts_Click(object sender, EventArgs e)
+        {
+            SearchForParts();
+        }
     }
 }

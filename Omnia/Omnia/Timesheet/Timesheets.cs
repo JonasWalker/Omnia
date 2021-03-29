@@ -24,7 +24,7 @@ namespace Omnia
         {
             timer1.Enabled = true;
             timer1.Interval = 100;
-            NameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
+            EmployeeNameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
             loadTimeSheet();
             //ClearTextBoxes();
             DoTheMathTextBoxes();

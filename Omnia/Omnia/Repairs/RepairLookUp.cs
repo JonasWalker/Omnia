@@ -63,17 +63,16 @@ namespace Omnia
 
         private void RepairLookUp_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
+            timer1.Interval = 100;
+            EmployeeNameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
         }
 
         private void CreateRepairButton_Click(object sender, EventArgs e)
         {
             NewRepair newRepair = new NewRepair();
             newRepair.ShowDialog();
-            if (newRepair.DialogResult == DialogResult.OK)
-            {
-                LoadAll();
-            }
+            LoadAll();
         }
 
         private void DeleteRepairBtton_Click(object sender, EventArgs e)
@@ -90,6 +89,21 @@ namespace Omnia
                 }
                 LoadAll();
             }
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            DateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy, hh:mm tt");
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            if(RepairListView.SelectedItems.Count == 1)
+            {
+                EditRepair editRepair = new EditRepair(RepairListView.SelectedItems[0].SubItems[0].Text);
+                editRepair.ShowDialog();
+            }
+            LoadAll();
         }
     }
 }

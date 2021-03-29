@@ -35,14 +35,14 @@ namespace Omnia
             // 
             // ChangeText
             // 
-            this.ChangeText.BackColor = System.Drawing.SystemColors.Control;
+            this.ChangeText.BackColor = System.Drawing.Color.White;
             this.ChangeText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ChangeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeText.Location = new System.Drawing.Point(42, 16);
             this.ChangeText.Multiline = true;
             this.ChangeText.Name = "ChangeText";
             this.ChangeText.Size = new System.Drawing.Size(200, 60);
-            this.ChangeText.TabIndex = 28;
+            this.ChangeText.TabIndex = 1;
             this.ChangeText.Text = "Text";
             this.ChangeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -56,7 +56,7 @@ namespace Omnia
             this.OKButton.Location = new System.Drawing.Point(105, 119);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 30);
-            this.OKButton.TabIndex = 26;
+            this.OKButton.TabIndex = 0;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
             // 
@@ -64,13 +64,16 @@ namespace Omnia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(284, 161);
             this.Controls.Add(this.ChangeText);
             this.Controls.Add(this.OKButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GiveChangeMessage";
-            this.Text = "GiveChangeMessage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Give Change Message";
             this.Load += new System.EventHandler(this.GiveChangeMessage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

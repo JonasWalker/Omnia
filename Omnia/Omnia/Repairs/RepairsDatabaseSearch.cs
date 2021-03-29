@@ -23,6 +23,38 @@ namespace Omnia
         public String repairModel { get; private set; }
         public String repairSerial { get; private set; }
         public String repairNotes { get; private set; }
+        public Repair repair { get; private set; }
+
+        public struct Repair
+        {
+            public String repairID;
+            public String repairTag;
+            public String repairCustName;
+            public String repairCustPhoneNumber;
+            public String repairDescription;
+            public String repairModel;
+            public String repairSerial;
+            public String repairNotes;
+
+            public Repair(String _repairID = null, String _repairTag = null, String _repairCustName = null, String _repairCustPhoneNumber = null, String _repairDescription = null,
+                String _repairModel = null, String _repairSerial = null, String _repairNotes = null)
+            {
+                repairID = _repairID;
+                repairTag = _repairTag;
+                repairCustName = _repairCustName;
+                repairCustPhoneNumber = _repairCustPhoneNumber;
+                repairDescription = _repairDescription;
+                repairModel = _repairModel;
+                repairSerial = _repairSerial;
+                repairNotes = _repairNotes;
+            }
+        }
+
+        public RepairsDatabaseSearch(String _repairID)
+        {
+            repairID = _repairID;
+            SearchForRepairID();
+        }
 
         private RepairsDatabaseSearch(String id, String rT, String rC, String rCNum, String rD, String rM, String rS, String rN)
         {
@@ -139,7 +171,6 @@ namespace Omnia
                 RepairsDatabaseSearch u = new RepairsDatabaseSearch(repairID, repairTag, repairCustName, repairCustPhoneNumber, repairDescription, repairModel, repairSerial, repairNotes);
 
                 repairs.Add(u);
-
             }
 
             dbConn.Close();
@@ -147,6 +178,39 @@ namespace Omnia
 
             return repairs;
         }
+        public void SearchForRepairID()
+        {
+            String query = "SELECT * FROM omnia.repairs WHERE repairID = \"" + repairID + "\";";
+            MySqlCommand cmd = new MySqlCommand(query, dbConn);
+            dbConn.Open();
 
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                String repairID = reader["repairID"].ToString();
+                String repairTag = reader["repairTag"].ToString();
+                String repairCustName = reader["repairCustName"].ToString();
+                String repairCustPhoneNumber = reader["repairCustPhoneNumber"].ToString();
+                String repairDescription = reader["repairDescription"].ToString();
+                String repairModel = reader["repairModel"].ToString();
+                String repairSerial = reader["repairSerial"].ToString();
+                String repairNotes = reader["repairNotes"].ToString();
+
+                repair = new Repair(repairID, repairTag, repairCustName, repairCustPhoneNumber, repairDescription, repairModel, repairSerial, repairNotes);
+            }
+            dbConn.Close();
+        }
+
+        public void EditRepairInfo(String _repairID, String _repairTag, String _repairCustName, String _repairCustPhoneNumber, String _repairDescription,
+                String _repairModel, String _repairSerial, String _repairNotes)
+        {
+            String query = "UPDATE omnia.repairs SET repairTag = \'" + _repairTag + "\', repairCustName = \'" + _repairCustName + "\', repairCustPhoneNumber = \'" + _repairCustPhoneNumber + "\', repairDescription = \'" + _repairDescription +
+                "\', repairModel = \'" + _repairModel + "\', repairSerial = \'" + _repairSerial + "\', repairNotes = \'" + _repairNotes + "\'WHERE repairID = " + _repairID + ";";
+            MySqlCommand cmd = new MySqlCommand(query, dbConn);
+            dbConn.Open();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            dbConn.Close();
+        }
     }
 }

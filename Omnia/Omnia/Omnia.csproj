@@ -49,6 +49,24 @@
   <ItemGroup>
     <Compile Include="Customers\CustomersDatabaseSearch.cs" />
     <Compile Include="Customers\DeleteCustomer.cs" />
+    <Compile Include="Customers\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repairs\EditRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repairs\EditRepair.Designer.cs">
+      <DependentUpon>EditRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parts\EditPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parts\EditPart.Designer.cs">
+      <DependentUpon>EditPart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Messages\GiveChangeMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,16 +175,25 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimesheetDatabaseSearch.cs" />
-    <Compile Include="Timesheets.cs">
+    <Compile Include="Timesheet\TimesheetDatabaseSearch.cs" />
+    <Compile Include="Timesheet\Timesheets.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Timesheets.Designer.cs">
+    <Compile Include="Timesheet\Timesheets.Designer.cs">
       <DependentUpon>Timesheets.cs</DependentUpon>
     </Compile>
     <Compile Include="Parts\PartsDatabaseSearch.cs" />
     <EmbeddedResource Include="Customers\CustomerLookUp.resx">
       <DependentUpon>CustomerLookUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repairs\EditRepair.resx">
+      <DependentUpon>EditRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parts\EditPart.resx">
+      <DependentUpon>EditPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Messages\GiveChangeMessage.resx">
       <DependentUpon>GiveChangeMessage.cs</DependentUpon>
@@ -226,7 +253,7 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Timesheets.resx">
+    <EmbeddedResource Include="Timesheet\Timesheets.resx">
       <DependentUpon>Timesheets.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

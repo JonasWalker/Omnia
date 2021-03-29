@@ -40,3 +40,6 @@ C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.SelectPa
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.SelectCustomerLookUp.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.PaymentScreen.resources
 C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.GiveChangeMessage.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.EditPart.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.EditCustomer.resources
+C:\Users\jonas\OneDrive\Desktop\Omnia\Omnia\Omnia\Omnia\obj\Debug\Omnia.EditRepair.resources

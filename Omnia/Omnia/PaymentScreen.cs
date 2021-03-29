@@ -43,7 +43,7 @@ namespace Omnia
             DoTheMathTextBoxes();
             GiveChangeMessage giveChangeMessage = new GiveChangeMessage("Change: $" + (addedAmount - grandTotal).ToString("0.00"));
             giveChangeMessage.ShowDialog();
-            if(giveChangeMessage.DialogResult == DialogResult.OK)
+            if (giveChangeMessage.DialogResult == DialogResult.OK)
             {
                 this.Close();
             }
@@ -160,11 +160,6 @@ namespace Omnia
             {
                 CheckTextBox.Text = "0.00";
             }
-        }
-
-        private void CreditCardTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

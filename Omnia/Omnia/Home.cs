@@ -67,7 +67,7 @@ namespace Omnia
         {
             timer1.Enabled = true;
             timer1.Interval = 100;
-            NameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
+            EmployeeNameLabel.Text = LoginDatabaseSearch.selectedUser.firstName + " " + LoginDatabaseSearch.selectedUser.lastName;
         }
 
         private void partToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,5 +104,16 @@ namespace Omnia
         {
             DateLabel.Text = DateTime.Now.ToString("dddd, MMM dd yyyy, hh:mm tt");
         }
+
+        private void logOffOmniaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void logOffUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
     }
 }

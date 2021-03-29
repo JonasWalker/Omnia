@@ -32,7 +32,7 @@ namespace Omnia
             this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.DateLabel = new System.Windows.Forms.ToolStripLabel();
-            this.NameLabel = new System.Windows.Forms.ToolStripLabel();
+            this.EmployeeNameLabel = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ClearListButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
@@ -62,11 +62,11 @@ namespace Omnia
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DateLabel,
-            this.NameLabel});
+            this.EmployeeNameLabel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 538);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(398, 25);
-            this.toolStrip1.TabIndex = 22;
+            this.toolStrip1.TabIndex = 20;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // DateLabel
@@ -75,12 +75,12 @@ namespace Omnia
             this.DateLabel.Size = new System.Drawing.Size(31, 22);
             this.DateLabel.Text = "Date";
             // 
-            // NameLabel
+            // EmployeeNameLabel
             // 
-            this.NameLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(39, 22);
-            this.NameLabel.Text = "Name";
+            this.EmployeeNameLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
+            this.EmployeeNameLabel.Size = new System.Drawing.Size(39, 22);
+            this.EmployeeNameLabel.Text = "Name";
             // 
             // timer1
             // 
@@ -92,7 +92,7 @@ namespace Omnia
             this.ClearListButton.Location = new System.Drawing.Point(221, 495);
             this.ClearListButton.Name = "ClearListButton";
             this.ClearListButton.Size = new System.Drawing.Size(75, 30);
-            this.ClearListButton.TabIndex = 38;
+            this.ClearListButton.TabIndex = 9;
             this.ClearListButton.Text = "Clear";
             this.ClearListButton.UseVisualStyleBackColor = true;
             this.ClearListButton.Click += new System.EventHandler(this.ClearListButton_Click);
@@ -104,7 +104,7 @@ namespace Omnia
             this.BackButton.Location = new System.Drawing.Point(302, 495);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 30);
-            this.BackButton.TabIndex = 39;
+            this.BackButton.TabIndex = 10;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             // 
@@ -114,7 +114,7 @@ namespace Omnia
             this.SaveAndCloseButton.Location = new System.Drawing.Point(12, 495);
             this.SaveAndCloseButton.Name = "SaveAndCloseButton";
             this.SaveAndCloseButton.Size = new System.Drawing.Size(124, 30);
-            this.SaveAndCloseButton.TabIndex = 40;
+            this.SaveAndCloseButton.TabIndex = 7;
             this.SaveAndCloseButton.Text = "Save and Close";
             this.SaveAndCloseButton.UseVisualStyleBackColor = true;
             this.SaveAndCloseButton.Click += new System.EventHandler(this.SaveAndCloseButton_Click);
@@ -125,7 +125,7 @@ namespace Omnia
             this.SaveButton.Location = new System.Drawing.Point(142, 495);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 30);
-            this.SaveButton.TabIndex = 41;
+            this.SaveButton.TabIndex = 8;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -136,7 +136,7 @@ namespace Omnia
             this.SundayHoursTextBox.Location = new System.Drawing.Point(217, 57);
             this.SundayHoursTextBox.Name = "SundayHoursTextBox";
             this.SundayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.SundayHoursTextBox.TabIndex = 45;
+            this.SundayHoursTextBox.TabIndex = 0;
             this.SundayHoursTextBox.Text = "0.0";
             this.SundayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.SundayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SundayHoursTextBox_KeyPress);
@@ -149,7 +149,7 @@ namespace Omnia
             this.SundayLabel.Location = new System.Drawing.Point(120, 60);
             this.SundayLabel.Name = "SundayLabel";
             this.SundayLabel.Size = new System.Drawing.Size(91, 25);
-            this.SundayLabel.TabIndex = 44;
+            this.SundayLabel.TabIndex = 11;
             this.SundayLabel.Text = "Sunday:";
             // 
             // MondayHoursTextBox
@@ -158,7 +158,7 @@ namespace Omnia
             this.MondayHoursTextBox.Location = new System.Drawing.Point(217, 100);
             this.MondayHoursTextBox.Name = "MondayHoursTextBox";
             this.MondayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.MondayHoursTextBox.TabIndex = 47;
+            this.MondayHoursTextBox.TabIndex = 1;
             this.MondayHoursTextBox.Text = "0.0";
             this.MondayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.MondayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MondayHoursTextBox_KeyPress);
@@ -171,7 +171,7 @@ namespace Omnia
             this.MondayLabel.Location = new System.Drawing.Point(114, 103);
             this.MondayLabel.Name = "MondayLabel";
             this.MondayLabel.Size = new System.Drawing.Size(95, 25);
-            this.MondayLabel.TabIndex = 46;
+            this.MondayLabel.TabIndex = 12;
             this.MondayLabel.Text = "Monday:";
             // 
             // TuesdayHoursTextBox
@@ -180,7 +180,7 @@ namespace Omnia
             this.TuesdayHoursTextBox.Location = new System.Drawing.Point(217, 141);
             this.TuesdayHoursTextBox.Name = "TuesdayHoursTextBox";
             this.TuesdayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.TuesdayHoursTextBox.TabIndex = 49;
+            this.TuesdayHoursTextBox.TabIndex = 2;
             this.TuesdayHoursTextBox.Text = "0.0";
             this.TuesdayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TuesdayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TuesdayHoursTextBox_KeyPress);
@@ -193,7 +193,7 @@ namespace Omnia
             this.TuesdayLabel.Location = new System.Drawing.Point(110, 144);
             this.TuesdayLabel.Name = "TuesdayLabel";
             this.TuesdayLabel.Size = new System.Drawing.Size(101, 25);
-            this.TuesdayLabel.TabIndex = 48;
+            this.TuesdayLabel.TabIndex = 13;
             this.TuesdayLabel.Text = "Tuesday:";
             // 
             // WednesdayHoursTextBox
@@ -202,7 +202,7 @@ namespace Omnia
             this.WednesdayHoursTextBox.Location = new System.Drawing.Point(217, 182);
             this.WednesdayHoursTextBox.Name = "WednesdayHoursTextBox";
             this.WednesdayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.WednesdayHoursTextBox.TabIndex = 51;
+            this.WednesdayHoursTextBox.TabIndex = 3;
             this.WednesdayHoursTextBox.Text = "0.0";
             this.WednesdayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.WednesdayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WednesdayHoursTextBox_KeyPress);
@@ -215,7 +215,7 @@ namespace Omnia
             this.WednesdayLabel.Location = new System.Drawing.Point(79, 185);
             this.WednesdayLabel.Name = "WednesdayLabel";
             this.WednesdayLabel.Size = new System.Drawing.Size(132, 25);
-            this.WednesdayLabel.TabIndex = 50;
+            this.WednesdayLabel.TabIndex = 14;
             this.WednesdayLabel.Text = "Wednesday:";
             // 
             // ThrusdayHoursTextBox
@@ -224,7 +224,7 @@ namespace Omnia
             this.ThrusdayHoursTextBox.Location = new System.Drawing.Point(217, 228);
             this.ThrusdayHoursTextBox.Name = "ThrusdayHoursTextBox";
             this.ThrusdayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.ThrusdayHoursTextBox.TabIndex = 53;
+            this.ThrusdayHoursTextBox.TabIndex = 4;
             this.ThrusdayHoursTextBox.Text = "0.0";
             this.ThrusdayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ThrusdayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ThrusdayHoursTextBox_KeyPress);
@@ -237,7 +237,7 @@ namespace Omnia
             this.ThrusdayLabel.Location = new System.Drawing.Point(103, 231);
             this.ThrusdayLabel.Name = "ThrusdayLabel";
             this.ThrusdayLabel.Size = new System.Drawing.Size(108, 25);
-            this.ThrusdayLabel.TabIndex = 52;
+            this.ThrusdayLabel.TabIndex = 15;
             this.ThrusdayLabel.Text = "Thrusday:";
             // 
             // FridayHoursTextBox
@@ -246,7 +246,7 @@ namespace Omnia
             this.FridayHoursTextBox.Location = new System.Drawing.Point(217, 271);
             this.FridayHoursTextBox.Name = "FridayHoursTextBox";
             this.FridayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.FridayHoursTextBox.TabIndex = 55;
+            this.FridayHoursTextBox.TabIndex = 5;
             this.FridayHoursTextBox.Text = "0.0";
             this.FridayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.FridayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FridayHoursTextBox_KeyPress);
@@ -259,7 +259,7 @@ namespace Omnia
             this.FridayLabel.Location = new System.Drawing.Point(133, 271);
             this.FridayLabel.Name = "FridayLabel";
             this.FridayLabel.Size = new System.Drawing.Size(78, 25);
-            this.FridayLabel.TabIndex = 54;
+            this.FridayLabel.TabIndex = 16;
             this.FridayLabel.Text = "Friday:";
             // 
             // SaturdayHoursTextBox
@@ -268,7 +268,7 @@ namespace Omnia
             this.SaturdayHoursTextBox.Location = new System.Drawing.Point(217, 313);
             this.SaturdayHoursTextBox.Name = "SaturdayHoursTextBox";
             this.SaturdayHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.SaturdayHoursTextBox.TabIndex = 57;
+            this.SaturdayHoursTextBox.TabIndex = 6;
             this.SaturdayHoursTextBox.Text = "0.0";
             this.SaturdayHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.SaturdayHoursTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaturdayHoursTextBox_KeyPress);
@@ -281,7 +281,7 @@ namespace Omnia
             this.SaturdayLabel.Location = new System.Drawing.Point(105, 313);
             this.SaturdayLabel.Name = "SaturdayLabel";
             this.SaturdayLabel.Size = new System.Drawing.Size(104, 25);
-            this.SaturdayLabel.TabIndex = 56;
+            this.SaturdayLabel.TabIndex = 17;
             this.SaturdayLabel.Text = "Saturday:";
             // 
             // TotalHoursTextBox
@@ -291,7 +291,7 @@ namespace Omnia
             this.TotalHoursTextBox.Name = "TotalHoursTextBox";
             this.TotalHoursTextBox.ReadOnly = true;
             this.TotalHoursTextBox.Size = new System.Drawing.Size(60, 31);
-            this.TotalHoursTextBox.TabIndex = 59;
+            this.TotalHoursTextBox.TabIndex = 19;
             this.TotalHoursTextBox.Text = "0.0";
             this.TotalHoursTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -302,13 +302,14 @@ namespace Omnia
             this.TotalHoursLabel.Location = new System.Drawing.Point(94, 388);
             this.TotalHoursLabel.Name = "TotalHoursLabel";
             this.TotalHoursLabel.Size = new System.Drawing.Size(129, 25);
-            this.TotalHoursLabel.TabIndex = 58;
+            this.TotalHoursLabel.TabIndex = 18;
             this.TotalHoursLabel.Text = "Total Hours:";
             // 
             // Timesheets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(398, 563);
             this.Controls.Add(this.TotalHoursTextBox);
             this.Controls.Add(this.TotalHoursLabel);
@@ -348,7 +349,7 @@ namespace Omnia
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel DateLabel;
-        private System.Windows.Forms.ToolStripLabel NameLabel;
+        private System.Windows.Forms.ToolStripLabel EmployeeNameLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button ClearListButton;
         private System.Windows.Forms.Button BackButton;
